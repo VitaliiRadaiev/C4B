@@ -32,8 +32,9 @@ jQuery(document).ready(function ($) {
 
     let home = document.querySelector('.home-page');
     if(home) {
-        anime.timeline({
+        let anim1 = anime.timeline({
             easing: 'easeInOutQuad',
+            autoplay: false,
         })
         .add({
             targets: '.header__logo',
@@ -59,7 +60,7 @@ jQuery(document).ready(function ($) {
             autoplay: false,
         }, '-=100');
 
-        anime.timeline({
+        let anim2 = anime.timeline({
             easing: 'easeInOutQuad',
         })
         .add({
@@ -69,7 +70,7 @@ jQuery(document).ready(function ($) {
             delay: 0,
         })
 
-        anime.timeline({
+        let anim3 = anime.timeline({
             easing: 'easeInOutQuad',
         })
         .add({
@@ -88,6 +89,12 @@ jQuery(document).ready(function ($) {
             duration: 2000,
             delay: 0,
         }, '-=1500')
+
+        window.addEventListener('load', function () {
+            anim1.play();
+            anim2.play();
+            anim3.play();
+        })
     }
 
     let bottomArrow = document.querySelector('.promo__bottom-arrow');
