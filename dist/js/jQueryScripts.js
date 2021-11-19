@@ -62,6 +62,7 @@ jQuery(document).ready(function ($) {
 
         let anim2 = anime.timeline({
             easing: 'easeInOutQuad',
+            autoplay: false,
         })
         .add({
             targets: '.promo-bg',
@@ -72,6 +73,7 @@ jQuery(document).ready(function ($) {
 
         let anim3 = anime.timeline({
             easing: 'easeInOutQuad',
+            autoplay: false,
         })
         .add({
             targets: '.promo-bg__layer-1 img',
