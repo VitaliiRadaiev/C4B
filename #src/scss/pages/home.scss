@@ -1,0 +1,123 @@
+.woodlands {
+    padding: 315px 0;
+    position: relative;
+
+    @media (max-width: $md2+px) {
+        padding: 100px 0;
+    }
+    @media (max-width: $md3+px) {
+        padding: 50px 0;
+    }
+
+    &__decor {
+        position: absolute;
+        top: 45%;
+        right: 0;
+        transform: translate(65%, -50%);
+        width: 40%;
+        max-width: 356px;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 150px;
+        left: 0;
+        z-index: 1;
+        width: 66.6666%;
+        max-width: 1280px;
+        height: 0;
+        padding-bottom: 50.625%;
+
+        @media (max-width: $md2+px) {
+            position: relative;
+            width: 83.09%;
+            top: 0;
+            margin-bottom: -6%;
+        }
+    }
+
+    &__img-1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 80.93%;
+        height: 71.38%;
+        opacity: 0.2;
+    }
+    &__img-2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 68.93%;
+        height: 71.38%;
+        opacity: 0.2;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        display: flex;
+    }
+
+    &__text-wrap {
+        width: 100%;
+        max-width: 719px;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $md2+px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        & > strong {
+            display: inline-block;
+            background-color: $textColor;
+            margin-bottom: 0.111111em;
+            padding: 0.111111em;
+            align-self: flex-start;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 28px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.005em;
+        line-height: 1.92em;
+        margin-bottom: 50px;
+
+        @media (max-width: $md2+px) {
+            padding-left: 50px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-left: 20px;
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+    }
+
+    & .default-link {
+        margin-left: auto;
+    }
+}
+
+
