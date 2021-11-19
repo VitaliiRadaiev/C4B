@@ -79,7 +79,7 @@
             duration: 2000,
             delay: 0,
         }).add({
-            targets: '.promo-bg__layer-3 > img',
+            targets: ['.promo-bg__layer-3 > img', '.promo-bg__dec-1 img', '.promo-bg__dec-2 img', '.promo-bg__dec-3 img', '.promo-bg__dec-4 img', '.promo-bg__dec-5 img',],
             translateY: ['50px', '0px'],
             duration: 2000,
             delay: 0,

@@ -69,4 +69,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			item.setAttribute('data-wow-delay', '0.5s');
 		})
 	}
+
+	@@include('../common/promo/promo.js');
+
 });

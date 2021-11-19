@@ -1,6 +1,5 @@
 jQuery(document).ready(function ($) {
   @@include('plagins/jquery.parallax.js');
-  @@include('../common/promo/promo.js');
 
 
   $('img.img-svg').each(function () {
