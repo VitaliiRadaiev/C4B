@@ -59,6 +59,41 @@
             text-align: left;
         }
     }
+
+    &__bottom-arrow {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+        width: 50px;
+
+        @media (min-width: 992px) {
+            display: none;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+            display: block;
+            animation: arrowAnim 2s ease infinite;
+        }
+
+        @keyframes arrowAnim {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+        }
+    }
 }
 
 .promo-bg {

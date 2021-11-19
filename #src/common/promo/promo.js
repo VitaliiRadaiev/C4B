@@ -87,4 +87,15 @@
             delay: 0,
         }, '-=1500')
     }
+
+    let bottomArrow = document.querySelector('.promo__bottom-arrow');
+    if(bottomArrow) {
+        let nextEl = bottomArrow.closest('.promo').nextElementSibling;
+        bottomArrow.addEventListener('click', () => {
+            window.scrollTo({
+                top: nextEl.offsetTop,
+                behavior: 'smooth',
+            })
+        })
+    }
 }

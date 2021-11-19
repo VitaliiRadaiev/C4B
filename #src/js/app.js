@@ -28,6 +28,14 @@ window.addEventListener('load', function () {
 
 	@@include('_function.js');
 	@@include('../common/header/header.js');
+	@@include('../common/gallery-cards/gallery-cards.js');
+	@@include('pages/home.js');
+
+	let wow = new WOW({
+		boxClass: '_anim',
+		offset: 7,
+	})
+	wow.init();
 });
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -54,4 +62,11 @@ window.addEventListener('DOMContentLoaded', function () {
 			document.querySelector('body').classList.add('no-webp');
 		}
 	});
+
+	let animAll = document.querySelectorAll('._anim');
+	if(animAll.length) {
+		animAll.forEach(item => {
+			item.setAttribute('data-wow-delay', '0.5s');
+		})
+	}
 });
