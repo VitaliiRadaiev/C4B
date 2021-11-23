@@ -18,25 +18,17 @@
         }
 
         & .header__logo {
-            max-width: 307px;
+            max-width: 286px;
 
             @media (max-width: $md3+px) {
                 max-width: 240px;
-            }
-        }
-
-        & .header__burger {
-            width: 71px;
-
-            @media (max-width: $md3+px) {
-                width: 40px;
             }
         }
     }
     &__body {
         display: flex;
         align-items: center;
-        min-height: 256px;
+        min-height: 205px;
         padding-top: 15px;
         padding-bottom: 15px;
         justify-content: space-between;
@@ -52,7 +44,7 @@
 
     &__logo {
         width: 100%;
-        max-width: 358px;
+        max-width: 286px;
         transition: all 0.4s ease;
         margin-right: 30px;
         & img {
@@ -66,7 +58,6 @@
     }
 
     &__burger {
-        width: 87px;
         flex: 0 0 auto;
         cursor: pointer;
         transition: all 0.4s ease;
@@ -75,8 +66,10 @@
             height: auto;
         }
 
-        @media (max-width: $md3+px) {
-            width: 40px;
+        & .burger {
+            @media (max-width: $md3+px) {
+                font-size: 6px;
+            }
         }
     }
 }

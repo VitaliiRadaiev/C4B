@@ -186,7 +186,7 @@ textarea {
 
 // === title ========================================================================
 .title-1 {
-	font-size: 110px;
+	font-size: 90px;
 	font-weight: 700;
 	letter-spacing: 0.005em;
 	line-height: 1em;
@@ -194,7 +194,7 @@ textarea {
 	margin-bottom: 0;
 
 	@media (max-width: $md2+px) {
-		font-size: 90px;
+		font-size: 80px;
 	}
 	@media (max-width: $md3+px) {
 		font-size: 70px;
@@ -265,34 +265,39 @@ button.btn-default {
 	color: #fff;
 	min-height: 68px;
 	padding: 13px 15px 8px;
-	transition: all .3s ease;
+	transition: all 0.3s ease;
 
 	@media (min-width: 992px) {
 		&:hover {
-			opacity: 0.8;
+			background-color: $hover;
+
+			& .default-link__icon {
+				transform: translateX(7px);
+			}
 		}
 	}
 
-    &__icon {
+	&__icon {
+		transition: all .3s ease;
 		margin-bottom: 10px;
-    }
+	}
 
-    &__text {
+	&__text {
 		margin-top: auto;
 		text-align: right;
 		font-size: 16px;
 		font-weight: 700;
 		line-height: 1em;
-    }
+	}
 }
 
-u {
-	text-decoration: none;
-	font-weight: 700;
-	background: linear-gradient(0deg, #59fed1 1%, #59fed1 1%, #59fed1 10%, rgba(0, 0, 0, 0) 10%);
-}
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: 0.005em;
+	line-height: 1.6em;
+
 	& h1 {
 	}
 	& h2 {
@@ -308,6 +313,7 @@ u {
 	}
 
 	& p {
+		margin-bottom: 1.2em;
 	}
 
 	& ul {
@@ -318,6 +324,20 @@ u {
 
 	& figure {
 	}
+
+	& a {
+		text-decoration: none;
+		font-weight: 700;
+		background: linear-gradient(0deg, #59fed1 1%, #59fed1 1%, #59fed1 10%, rgba(0, 0, 0, 0) 10%);
+		transition: all 0.3s ease;
+		color: inherit;
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $hover;
+			}
+		}
+	}
 }
 // === and TEXT CONTETN BLOCK ========================================================================
 
@@ -326,6 +346,7 @@ u {
 @import "../common/footer/footer";
 @import "../common/promo/promo";
 @import "../common/gallery-cards/gallery-cards";
+@import "../common/burger/burger";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
