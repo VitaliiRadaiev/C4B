@@ -291,6 +291,10 @@ button.btn-default {
 	}
 }
 
+[data-href] {
+	cursor: pointer;
+}
+
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
 	font-size: 30px;
@@ -345,7 +349,7 @@ button.btn-default {
 @import "../common/header/header";
 @import "../common/footer/footer";
 @import "../common/promo/promo";
-@import "../common/gallery-cards/gallery-cards";
+@import "../common/news-list/news-list";
 @import "../common/burger/burger";
 // ==== BLOCKS =====================================================
 

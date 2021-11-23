@@ -355,6 +355,17 @@ function trimString(el, stringLength = 0) {
 		offset: 7,
 	})
 	wow.init();
+
+
+	let castomLinks = document.querySelectorAll('[data-href]');
+	if(castomLinks.length) {
+		castomLinks.forEach(link => {
+			let src = link.dataset.href;
+			link.addEventListener('click', () => {
+				window.location.href = src;
+			})
+		})
+	}
 });
 
 window.addEventListener('DOMContentLoaded', function () {

@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
 	@@include('_function.js');
 	@@include('../common/burger/burger.js');
 	@@include('../common/header/header.js');
-	@@include('../common/gallery-cards/gallery-cards.js');
+	@@include('../common/news-list/news-list.js');
 	@@include('pages/home.js');
 
 	let wow = new WOW({
@@ -37,6 +37,17 @@ window.addEventListener('load', function () {
 		offset: 7,
 	})
 	wow.init();
+
+
+	let castomLinks = document.querySelectorAll('[data-href]');
+	if(castomLinks.length) {
+		castomLinks.forEach(link => {
+			let src = link.dataset.href;
+			link.addEventListener('click', () => {
+				window.location.href = src;
+			})
+		})
+	}
 });
 
 window.addEventListener('DOMContentLoaded', function () {
