@@ -6,7 +6,7 @@
     width: 100%;
     z-index: 48;
 
-    &.is-scroll {
+    &.is-scroll:not(.menu-open) {
         background-color: rgba($mainColor, 0.8);
 
         & .header__body {

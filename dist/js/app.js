@@ -301,11 +301,13 @@ function trimString(el, stringLength = 0) {
             console.log(lockPaddingValue);
             if(!menu.classList.contains('open')) {
                 menu.classList.add('open');
+                header.classList.add('menu-open');
                 document.body.classList.add('lock');
                 document.body.style.paddingRight = lockPaddingValue;
                 burger.open()
             } else {
                 menu.classList.remove('open');
+                header.classList.remove('menu-open');
                 document.body.classList.remove('lock');
                 burger.close();
                 document.body.style.paddingRight = 0;

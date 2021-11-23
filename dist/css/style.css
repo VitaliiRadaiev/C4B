@@ -4379,15 +4379,15 @@ textarea {
   z-index: 48;
 }
 
-.header.is-scroll {
+.header.is-scroll:not(.menu-open) {
   background-color: rgba(69, 69, 69, 0.8);
 }
 
-.header.is-scroll .header__body {
+.header.is-scroll:not(.menu-open) .header__body {
   min-height: 131px;
 }
 
-.header.is-scroll .header__logo {
+.header.is-scroll:not(.menu-open) .header__logo {
   max-width: 286px;
 }
 
@@ -5714,11 +5714,11 @@ textarea {
     font-size: 60px;
   }
 
-  .header.is-scroll .header__body {
+  .header.is-scroll:not(.menu-open) .header__body {
     min-height: 80px;
   }
 
-  .header.is-scroll .header__logo {
+  .header.is-scroll:not(.menu-open) .header__logo {
     max-width: 240px;
   }
 
