@@ -172,6 +172,17 @@ textarea {
 	}
 }
 
+.container-sm {
+	max-width: 1360px;
+	margin: 0 auto;
+	padding: 0 40px;
+
+	@media (max-width: $md4+px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 .ibg {
 	position: relative;
 	img {
@@ -219,6 +230,17 @@ textarea {
 }
 
 .title-3 {
+	font-size: 72px;
+	font-weight: 700;
+	letter-spacing: 0.005em;
+	line-height: 1em;
+
+	@media (max-width: $md3+px) {
+		font-size: 56px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 40px;
+	}
 }
 
 .title-4 {
@@ -227,6 +249,20 @@ textarea {
 .title-5 {
 }
 .title-6 {
+}
+
+.with-line {
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0.13888em;
+		left: -0.208em;
+		width: 0.3888em;
+		height: 0.819em;
+		background-color: #fff;
+		transform: translateX(-100%);
+	}
 }
 
 .suptitle {
@@ -278,7 +314,7 @@ button.btn-default {
 	}
 
 	&__icon {
-		transition: all .3s ease;
+		transition: all 0.3s ease;
 		margin-bottom: 10px;
 	}
 
@@ -302,6 +338,10 @@ button.btn-default {
 	letter-spacing: 0.005em;
 	line-height: 1.6em;
 
+	@media (max-width: 575.98px) {
+		font-size: 24px;
+	}
+
 	& h1 {
 	}
 	& h2 {
@@ -318,12 +358,27 @@ button.btn-default {
 
 	& p {
 		margin-bottom: 1.2em;
+
+		&.big-text {
+			font-size: 40px;
+
+			@media (max-width: 575.98px) {
+				font-size: 30px;
+			}
+		}
 	}
 
 	& ul {
 	}
 
 	& ol {
+		list-style: none;
+		padding-left: 1.3em;
+		margin-bottom: 1.2em;
+		
+		& > li  {
+
+		}
 	}
 
 	& figure {
@@ -351,12 +406,14 @@ button.btn-default {
 @import "../common/promo/promo";
 @import "../common/news-list/news-list";
 @import "../common/burger/burger";
+@import "../common/hero/hero";
+@import "../common/text-block/text-block";
+@import "../common/info-block/info-block";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 
-// ==== HOME =====================================================
 @import "pages/home";
-// ==== AND HOME =====================================================
+@import "pages/subscribe";
 
 // ==== AND PAGES =====================================================

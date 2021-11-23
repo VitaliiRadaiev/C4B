@@ -1,0 +1,37 @@
+.text-block {
+    padding: 160px 0;
+    position: relative;
+
+    @media (max-width: $md2+px) {
+        padding: 100px 0;
+    }
+
+    @media (max-width: $md3+px) {
+        padding: 50px 0;
+    }
+}
+
+.dec {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 2;
+    width: 30%;
+    max-width: 346px;
+    transform: translate(15%, -50%);
+    & img {
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 1600px) {
+        top: auto;
+        bottom: 0;
+        transform: translate(15%, 0%);
+    }
+
+    @media (max-width: $md3+px) {
+
+        transform: translate(15%, 40%);
+    }
+}

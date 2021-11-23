@@ -1,0 +1,62 @@
+.info-block {
+    position: relative;
+    background-color: $mainColor;
+    
+    &__media {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 58%;
+        z-index: 1;
+
+        & iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: $md1+px) {
+            position: static;
+            width: 100%;
+            height: 600px;
+        }
+        @media (max-width: $md3+px) {
+            height: 400px;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    &__text-wrap {
+        width: 41%;
+        min-height: 850px;
+        padding: 130px 60px 95px 0;
+        color: #fff;
+        pointer-events: auto;
+
+        @media (min-width: 1920px) {
+            width: 38%;
+        }
+
+        @media (max-width: $md1+px) {
+            padding: 130px 0 95px;
+            width: 100%;
+            min-height: auto;
+        }
+
+        @media (max-width: $md2+px) {
+            padding: 100px 0 80px;
+        }
+        @media (max-width: $md2+px) {
+            padding: 50px 0 30px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.569em;
+    }
+}

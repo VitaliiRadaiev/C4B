@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{
+    "dark": "dark"
+    })
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page subscribe-page">
+        <section class="hero">
+            <div class="dec">
+                <img src="img/photo/wabe1.svg" alt="">
+            </div>
+            <div class="hero__bg ibg">
+                <img src="img/photo/hero-bg.jpg" alt="">
+            </div>
+            <div class="hero__body container-sm">
+                <h1 class="hero__title title-1">Anmeldung</h1>
+            </div>
+        </section>
+
+        <section class="text-block">
+            <div class="dec">
+                <img src="img/photo/wabe2-dark.svg" alt="">
+            </div>
+            <div class="container-sm">
+                <div class="text-content">
+                    <p class="big-text">
+                        Hier können Sie Teil des Projekts Connect Forest Biodiversity werden und Ihre Waldflächen
+                        anmelden. Wir suchen Flächen von ca. 0.5-1.5 Hektar zur Außernutzungstellung für 10 Jahre zur
+                        Durchführung von wissenschaftlichen Begleituntersuchungen. WaldbesitzerInnen erhalten eine
+                        finanzielle Abgeltung.
+                    </p>
+                    <p>
+                        Dazu wird eine vertragliche Vereinbarung zwischen Waldbesitzer*innen und dem
+                        Bundesforschungszentrum für Wald (BFW) regelt die entgeltliche Außernutzungsstellung für einen
+                        bestimmten Zeitraum, in dem die Waldbesitzer*innen weder aufforsten noch Bäume entnehmen dürfen.
+                        Auch sonst dürfen keine Eingriffe vorgenommen werden. Eine Ausnahme bildet jedoch die jagdliche
+                        Bewirtschaftung.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-block">
+            <div class="info-block__body container">
+                <div class="info-block__text-wrap">
+                    <h3 class="info-block__title title-3 with-line">
+                        So einfach
+                        funktioniert´s
+                    </h3>
+                    <div class="text-content">
+                        <p>
+                            Folgende Schritte müssen Sie
+                            vornehmen:
+                        </p>
+                        <ol>
+                            <li>
+                                1. Zuerst müssen Sie sich <a href="#">registrieren</a>
+                            </li>
+                            <li>
+                                2. Sobald Sie registriert sind, können Sie beliebig viele <a href="#">Flächen melden.</a>
+                            </li>
+                        </ol>
+                        <p>
+                            Hier finden Sie eine Schritt für Schritt Video-Anleitung:
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block__media ibg">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CxwJrzEdw1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="subscribe-page-links">
+            <div class="subscribe-page-links__body container-sm">
+                <a href="#" class="subscribe-page-links__item">
+                    <div class="subscribe-page-links__item-icon">
+                        <span><img src="img/icons/pencil.svg" alt=""></span>
+                        <img src="img/icons/user-plus.svg" alt="">
+                    </div>
+                    <div class="subscribe-page-links__item-text">
+                        Registrierung
+                    </div>
+                </a>
+                <a href="#" class="subscribe-page-links__item">
+                    <div class="subscribe-page-links__item-icon">
+                        <span><img src="img/icons/pencil.svg" alt=""></span>
+                        <img src="img/icons/trees.svg" alt="">
+                    </div>
+                    <div class="subscribe-page-links__item-text">
+                        Flächenmeldung
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>
