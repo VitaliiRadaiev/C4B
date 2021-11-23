@@ -253,6 +253,37 @@ function trimString(el, stringLength = 0) {
 	if(str.length <= stringLength) return;
 	el.innerText = [...str].slice(0, stringLength).join('') + '...';
 };
+	function burgerHandler() {
+    let burger = document.querySelector('.burger');
+    if(burger) {
+        let span1 = burger.querySelector('span:nth-child(1)');
+        let span2 = burger.querySelector('span:nth-child(2)');
+        let span3 = burger.querySelector('span:nth-child(3)');
+        let span4 = burger.querySelector('span:nth-child(4)');
+
+        return {
+            el: burger,
+            toggle() {
+                span1.classList.toggle('first');
+                span2.classList.toggle('second');
+                span3.classList.toggle('third');
+                span4.classList.toggle('fourth');
+            },
+            close() {
+                span1.classList.remove('first');
+                span2.classList.remove('second');
+                span3.classList.remove('third');
+                span4.classList.remove('fourth');
+            },
+            open() {
+                span1.classList.add('first');
+                span2.classList.add('second');
+                span3.classList.add('third');
+                span4.classList.add('fourth');
+            }
+        }
+    }
+};
 	{
     let header = document.querySelector('.header'); 
     if(header) {
@@ -262,16 +293,23 @@ function trimString(el, stringLength = 0) {
 
         
         let menu = document.querySelector('.menu');
-        let burger = document.querySelector('.header__burger');
-        let btnClose = document.querySelector('.menu__close');
+        let burger = burgerHandler();
 
-        burger.addEventListener('click', () => {
-            menu.classList.add('open');
-            document.body.classList.add('lock');
-        })
-        btnClose.addEventListener('click', () => {
-            menu.classList.remove('open');
-            document.body.classList.remove('lock');
+
+        burger.el.addEventListener('click', () => {
+            const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
+            console.log(lockPaddingValue);
+            if(!menu.classList.contains('open')) {
+                menu.classList.add('open');
+                document.body.classList.add('lock');
+                document.body.style.paddingRight = lockPaddingValue;
+                burger.open()
+            } else {
+                menu.classList.remove('open');
+                document.body.classList.remove('lock');
+                burger.close();
+                document.body.style.paddingRight = 0;
+            }
         })
     }
 }

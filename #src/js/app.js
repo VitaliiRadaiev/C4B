@@ -27,6 +27,7 @@ window.addEventListener('load', function () {
 	// ==== AND ADD PADDING-TOP ================================
 
 	@@include('_function.js');
+	@@include('../common/burger/burger.js');
 	@@include('../common/header/header.js');
 	@@include('../common/gallery-cards/gallery-cards.js');
 	@@include('pages/home.js');

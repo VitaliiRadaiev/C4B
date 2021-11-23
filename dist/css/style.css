@@ -4376,7 +4376,7 @@ textarea {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 47;
+  z-index: 48;
 }
 
 .header.is-scroll {
@@ -4441,23 +4441,106 @@ textarea {
 .menu {
   position: fixed;
   top: 0;
-  left: 100%;
+  left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 48;
-  -webkit-transition: -webkit-transform 0.6s ease;
-  transition: -webkit-transform 0.6s ease;
-  -o-transition: transform 0.6s ease;
-  transition: transform 0.6s ease;
-  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  z-index: 47;
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
   overflow: hidden;
   max-width: none;
+  padding-top: 205px;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .menu.open {
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu.open .menu__bg {
+  -webkit-animation: menuBgAnim 1s ease 1 forwards;
+          animation: menuBgAnim 1s ease 1 forwards;
+}
+
+.menu.open .menu__list > li {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.menu.open .menu__list > li:nth-child(1) {
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.menu.open .menu__list > li:nth-child(2) {
+  -webkit-transition: all 1s ease 0.1s;
+  -o-transition: all 1s ease 0.1s;
+  transition: all 1s ease 0.1s;
+}
+
+.menu.open .menu__list > li:nth-child(3) {
+  -webkit-transition: all 1s ease 0.2s;
+  -o-transition: all 1s ease 0.2s;
+  transition: all 1s ease 0.2s;
+}
+
+.menu.open .menu__list > li:nth-child(4) {
+  -webkit-transition: all 1s ease 0.3s;
+  -o-transition: all 1s ease 0.3s;
+  transition: all 1s ease 0.3s;
+}
+
+.menu.open .menu__list > li:nth-child(5) {
+  -webkit-transition: all 1s ease 0.4s;
+  -o-transition: all 1s ease 0.4s;
+  transition: all 1s ease 0.4s;
+}
+
+.menu.open .menu__list > li:nth-child(6) {
+  -webkit-transition: all 1s ease 0.5s;
+  -o-transition: all 1s ease 0.5s;
+  transition: all 1s ease 0.5s;
+}
+
+.menu.open .menu__list > li:nth-child(7) {
+  -webkit-transition: all 1s ease 0.6s;
+  -o-transition: all 1s ease 0.6s;
+  transition: all 1s ease 0.6s;
+}
+
+.menu.open .menu__mobile-nav {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease 0.8s;
+  -o-transition: all 0.6s ease 0.8s;
+  transition: all 0.6s ease 0.8s;
+}
+
+.menu.open .social {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease 1s;
+  -o-transition: all 0.6s ease 1s;
+  transition: all 0.6s ease 1s;
+}
+
+.menu.open .menu__copy {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease 1.2s;
+  -o-transition: all 0.6s ease 1.2s;
+  transition: all 0.6s ease 1.2s;
+}
+
+.menu.open .dec-1,
+.menu.open .dec-2 {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease 1.3s;
+  -o-transition: all 0.6s ease 1.3s;
+  transition: all 0.6s ease 1.3s;
 }
 
 .menu .dec-1 {
@@ -4470,6 +4553,10 @@ textarea {
   -webkit-transform: translate(50px, -50%);
       -ms-transform: translate(50px, -50%);
           transform: translate(50px, -50%);
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0;
 }
 
 .menu .dec-1 img {
@@ -4484,9 +4571,13 @@ textarea {
   width: 30%;
   max-width: 450px;
   z-index: 2;
-  -webkit-transform: translate(-50px, 50px);
-      -ms-transform: translate(-50px, 50px);
-          transform: translate(-50px, 50px);
+  -webkit-transform: translate(-50px, 50px) scale(-1, 1);
+      -ms-transform: translate(-50px, 50px) scale(-1, 1);
+          transform: translate(-50px, 50px) scale(-1, 1);
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0;
 }
 
 .menu .dec-2 img {
@@ -4501,6 +4592,9 @@ textarea {
   width: 100%;
   height: 100%;
   z-index: 1;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .menu__bg:before {
@@ -4514,49 +4608,46 @@ textarea {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.menu__head {
-  position: relative;
-  z-index: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 220px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+@-webkit-keyframes menuBgAnim {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 76% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 76% 100%, 0 100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  95% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
-.menu__logo {
-  width: 100%;
-  max-width: 358px;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  margin-right: 30px;
-}
+@keyframes menuBgAnim {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 76% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 76% 100%, 0 100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 
-.menu__logo img {
-  width: 100%;
-  height: auto;
-}
+  95% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
 
-.menu__close {
-  font-size: 65px;
-  text-transform: uppercase;
-  color: #fff;
-  cursor: pointer;
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 .menu__scroll-wrap {
-  height: calc(100% - 220px);
+  height: 100%;
   overflow: auto;
   padding-bottom: 20px;
   display: -webkit-box;
@@ -4576,6 +4667,16 @@ textarea {
   margin-bottom: 40px;
 }
 
+.menu__list > li {
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+
 .menu__list > li:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -4586,6 +4687,31 @@ textarea {
   font-size: 32px;
   font-weight: 700;
   font-style: normal;
+  letter-spacing: 0.005em;
+  line-height: 1em;
+}
+
+.menu__mobile-nav {
+  margin-top: auto;
+  margin-bottom: 40px;
+  text-align: center;
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.menu__mobile-nav > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.menu__mobile-nav > li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.005em;
   line-height: 1em;
 }
 
@@ -4596,11 +4722,19 @@ textarea {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.07px;
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0;
 }
 
 .menu .social {
   margin-top: auto;
   margin-bottom: 20px;
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0;
 }
 
 .social {
@@ -5412,6 +5546,10 @@ textarea {
     color: #59fed1;
   }
 
+  .menu__mobile-nav {
+    display: none;
+  }
+
   .social > li a:hover svg path {
     fill: #59fed1;
   }
@@ -5509,16 +5647,11 @@ textarea {
     min-height: 180px;
   }
 
-  .menu__head {
-    min-height: 180px;
-  }
-
-  .menu__head {
-    min-height: 131px;
+  .menu {
+    padding-top: 180px;
   }
 
   .menu__scroll-wrap {
-    height: calc(100% - 180px);
     padding-top: 30px;
   }
 
@@ -5601,25 +5734,16 @@ textarea {
     font-size: 6px;
   }
 
+  .menu {
+    padding-top: 131px;
+  }
+
   .menu .dec-1 {
     width: 170px;
   }
 
   .menu .dec-2 {
     width: 170px;
-  }
-
-  .menu__logo {
-    max-width: 240px;
-  }
-
-  .menu__close {
-    font-size: 45px;
-  }
-
-  .menu__scroll-wrap {
-    height: calc(100% - 131px);
-    padding-top: 10px;
   }
 
   .menu__link {

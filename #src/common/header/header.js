@@ -7,16 +7,23 @@
 
         
         let menu = document.querySelector('.menu');
-        let burger = document.querySelector('.header__burger');
-        let btnClose = document.querySelector('.menu__close');
+        let burger = burgerHandler();
 
-        burger.addEventListener('click', () => {
-            menu.classList.add('open');
-            document.body.classList.add('lock');
-        })
-        btnClose.addEventListener('click', () => {
-            menu.classList.remove('open');
-            document.body.classList.remove('lock');
+
+        burger.el.addEventListener('click', () => {
+            const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
+            console.log(lockPaddingValue);
+            if(!menu.classList.contains('open')) {
+                menu.classList.add('open');
+                document.body.classList.add('lock');
+                document.body.style.paddingRight = lockPaddingValue;
+                burger.open()
+            } else {
+                menu.classList.remove('open');
+                document.body.classList.remove('lock');
+                burger.close();
+                document.body.style.paddingRight = 0;
+            }
         })
     }
 }
