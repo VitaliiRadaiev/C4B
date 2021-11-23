@@ -60,7 +60,7 @@
         z-index: 2;
         width: 68.93%;
         height: 71.38%;
-        
+
         & img {
             opacity: 0.2;
         }
@@ -126,21 +126,74 @@
     }
 }
 
-
 .partners {
+    font-size: 10px;
+    &.partners_v2 {
+
+        @media (max-width: $md1+px) {
+            font-size: 8px;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 6px;
+        }
+
+        & .partners__body {
+            display: block;
+        }
+
+        & .partners__list {
+            flex-wrap: wrap;
+            margin: 0 -2em;
+        }
+
+        & .partners__item {
+            flex: 0 1 33.3333%;
+            padding: 0 0.8em;
+            display: block;
+            text-align: center;
+            margin-bottom: 4em;
+
+            @media (max-width: $md2+px) {
+                flex: 0 1 50%;
+            }
+            @media (max-width: $md4+px) {
+                flex: 0 1 100%;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 160px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 100px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 50px;
+        }
+
+        &::before {
+            background-color: $textColor;
+        }
+    }
 
     &__body {
         display: flex;
         flex-wrap: wrap;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 160px;
+        padding-bottom: 160px;
         align-items: center;
-        
+
+        @media (max-width: $md2+px) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
         @media (min-width: 992px) {
             min-height: 695px;
         }
 
-        @media (max-width: $md4+px) {
+        @media (max-width: $md3+px) {
             padding-top: 50px;
             padding-bottom: 50px;
         }
@@ -151,14 +204,17 @@
         display: flex;
         flex-wrap: wrap;
         flex: 1 1 auto;
-    }   
+    }
 
     &__item {
-        padding: 20px 20px; 
+        padding: 20px 20px;
         flex: 0 1 20%;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 2.5em;
+        font-weight: 400;
+        line-height: 1.6em;
 
         @media (max-width: $md2+px) {
             flex: 0 1 33.333%;
@@ -173,5 +229,17 @@
             width: auto;
             height: auto;
         }
+    }
+
+    &__list-logo {
+        height: 8.4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.9em;
+    }
+
+    &__list-name {
+        font-weight: 700;
     }
 }

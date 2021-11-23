@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Project</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+		
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <header class="header dark">
+    <div class="header__body container">
+        <div class="header__logo logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="logo">
+            </a>
+        </div>
+        <div class="header__burger">
+            <div class="burger-wrap">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div> 
+    </div>
+</header>
+
+
+<div class="menu">
+    <div class="dec-1">
+        <img src="img/photo/wabe1.svg" alt="">
+    </div>
+    <div class="dec-2">
+        <img src="img/photo/wabe1.svg" alt="">
+    </div>
+
+    <div class="menu__bg ibg">
+        <img src="img/photo/menu-bg.jpg" alt="">
+    </div>
+    <div class="menu__scroll-wrap container">
+        <ul class="menu__list">
+            <li>
+                <a href="#" class="menu__link">
+                    das projekt
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    team
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    trittsteinbiotope
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    monitoring
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    aktuelles
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    downloads
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    anmeldung
+                </a>
+            </li>
+        </ul>
+        <ul class="menu__mobile-nav">
+            <li>
+                <a href="#" class="">
+                    Impressum     	
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">Datenschutz</a>
+            </li>
+            <li>
+                <a href="#" class="">Barrierefreiheit</a>
+            </li>
+            <li>
+                <a href="#" class="">Kontakt</a>
+            </li>
+        </ul>
+        <ul class="social">
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/youtube.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="menu__copy">
+            © 2021 - Bundesforschungs- und Ausbildungszentrum für Wald, Naturgefahren und Landschaft
+        </div>
+    </div>
+</div> 
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page team-page">
+        <section class="hero">
+            <div class="dec">
+                <img src="img/photo/wabe1.svg" alt="">
+            </div>
+            <div class="hero__bg ibg">
+                <img src="img/photo/hero-bg.jpg" alt="">
+            </div>
+            <div class="hero__body container-sm">
+                <h1 class="hero__title title-1">Unser Team</h1>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="container-sm">
+                <ul class="team__list">
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+                    <li>
+                        <div class="team__photo ibg">
+                            <img src="img/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="team__name">
+                            Janine Oettel
+                        </div>
+                        <div class="team__position">
+                            Projektleitung und -management
+                        </div>
+                        <a href="mailto:" class="team__email">
+                            janine.oettel@bfw.gv.at
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="partners partners_v2 ">
+            <div class="partners__body container pt-0">
+                <h3 class="partners__title title-3 with-line">
+                    Unsere Partner
+                </h3>
+                <div class="partners__list">
+                    <div class="partners__item">
+                        <div class="partners__list-logo">
+                            <img src="img/photo/partners-logo-3.svg" alt="">
+                        </div>
+                        <div class="partners__list-name">
+                            Bundesforschungs- und Ausbildungs-
+                            zentrum für Wald, Naturgefahren
+                            und Landschaft
+                        </div>
+                        <p>www.bfw.gv.at</p>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__list-logo">
+                            <img src="img/photo/partners-logo-1.svg" alt="">
+                        </div>
+                        <div class="partners__list-name">
+                            BIOSA Biosphäre Austria	
+                        </div>
+                        <p>Kontakt: Renate Haslinger</p>
+                        <p>biosa@landforstbetriebe.at</p>
+                        <p>www.biosa.at</p>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__list-logo">
+                            <img src="img/photo/partners-logo-2.svg" alt="">
+                        </div>
+                        <div class="partners__list-name">
+                            Universität Wien - BioInvasions 
+                        </div>
+                        <p>Global Change Macroecology-Group </p>
+                        <p>Kontakt: Franz Essl</p>
+                        <p>Franz.essl@univie.ac.at</p>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__list-logo">
+                            <img src="img/photo/partners-logo-5.svg" alt="">
+                        </div>
+                        <div class="partners__list-name">Capreolus e.U.</div>
+                        <p>Kontakt: Robin Sandfort</p>
+                        <p>info@capreolus.at</p>
+                        <p>www.capreolus.at</p>
+                    </div>
+                    <div class="partners__item">
+                        <div class="partners__list-logo">
+                            <img src="img/photo/partners-logo-4.svg" alt="">
+                        </div>
+                        <div class="partners__list-name">
+                            Österreichische Mykologische Gesellschaft 
+                        </div>
+                        <p>Kontakt: Irmgard Krisai-Greilhuber</p>
+                        <p>Kontakt info-oemg@univie.ac.at</p>
+                        <p>www.univie.ac.at/oemykges/</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== --> 
+    <footer class="footer">
+    <div class="footer__decor">
+        <img class="_anim fadeInUp" src="img/photo/wabe1.svg" alt="">
+    </div>
+    <div class="footer__body container">
+        <div class="footer__top _anim fadeIn">
+            <img class="" src="img/photo/EU_Banner@2x.jpg" alt="">
+        </div>
+        <div class="footer__mid">
+            <div class="footer__logo _anim fadeInUp">
+                <a href="#">
+                    <img class="img-svg" src="img/logo/footer-logo-4.svg" alt=""> 
+                </a>
+            </div>
+            <ul class="social _anim fadeInUp">
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/youtube.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copy _anim fadeInUp">
+                © 2021 - Bundesforschungs- und Ausbildungszentrum für Wald, Naturgefahren und Landschaft
+            </div>
+            <ul class="footer__nav _anim fadeInUp">
+                <li>
+                    <a href="#" class="footer__nav-link">
+                        Impressum     	
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="footer__nav-link">Datenschutz</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__nav-link">Barrierefreiheit</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__nav-link">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    <!-- == // FOOTER ================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+</body>
+
+</html>

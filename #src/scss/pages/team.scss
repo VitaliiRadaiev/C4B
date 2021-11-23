@@ -1,0 +1,77 @@
+
+
+.team {
+    padding: 160px 0;
+
+    @media (max-width: $md2+px) {
+        padding: 100px 0;
+    }
+
+    @media (max-width: $md3+px) {
+        padding: 50px 0;
+    }
+
+    &__list {
+        font-size: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1.5em;
+
+        @media (max-width: $md1+px) {
+            font-size: 8px;
+        }
+        @media (max-width: $md3+px) {
+            font-size: 6px;
+        }
+
+        & > li {
+            flex: 0 1 33.33333%;
+            padding: 0 1.5em;
+            text-align: center;
+            margin-bottom: 10em;
+
+            @media (max-width: $md2+px) {
+                flex: 0 1 50%;
+            }
+
+            @media (max-width: $md4+px) {
+                flex: 0 1 100%;
+            }
+        }
+    }
+
+    &__photo {
+        height: 28.5em;
+        width: 28.5em;
+        margin: 0 auto 4em;
+        border-radius: 50%;
+    }
+
+    &__name {
+        font-size: 4em;
+        font-weight: 700;
+        line-height: 1.2em;
+        margin-bottom: 0.5em;
+    }
+
+    &__position {
+        font-size: 2.8em;
+        line-height: 1.2em;
+        margin-bottom: 0.666em;
+    }
+
+    &__email {
+        font-size: 2.8em;
+        list-style: 1.2em;
+        font-weight: 700;
+		background: linear-gradient(0deg, #59fed1 1%, #59fed1 1%, #59fed1 10%, rgba(0, 0, 0, 0) 10%);
+		transition: all 0.3s ease;
+		color: inherit;
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $hover;
+			}
+		}
+    }
+}

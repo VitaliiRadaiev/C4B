@@ -194,6 +194,9 @@ textarea {
 		object-fit: cover;
 	}
 }
+.pt-0 {
+	padding-top: 0 !important;
+}
 
 // === title ========================================================================
 .title-1 {
@@ -262,6 +265,10 @@ textarea {
 		height: 0.819em;
 		background-color: #fff;
 		transform: translateX(-100%);
+
+		@media (max-width: $md1+px) {
+			left: -0.08em;
+		}
 	}
 }
 
@@ -375,7 +382,7 @@ button.btn-default {
 		list-style: none;
 		padding-left: 1.3em;
 		margin-bottom: 1.2em;
-		
+
 		& > li  {
 
 		}
@@ -415,5 +422,6 @@ button.btn-default {
 
 @import "pages/home";
 @import "pages/subscribe";
+@import "pages/team";
 
 // ==== AND PAGES =====================================================
