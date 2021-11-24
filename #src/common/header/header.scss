@@ -10,7 +10,7 @@
         background-color: rgba($mainColor, 0.8);
 
         & .header__body {
-            min-height: 131px;
+            min-height: 85px;
 
             @media (max-width: $md3+px) {
                 min-height: 80px;

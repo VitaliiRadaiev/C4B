@@ -4328,6 +4328,14 @@ textarea {
   line-height: 1em;
 }
 
+.title-5 {
+  font-size: 48px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.005em;
+  line-height: 1.25em;
+}
+
 .with-line {
   position: relative;
 }
@@ -4345,10 +4353,14 @@ textarea {
           transform: translateX(-100%);
 }
 
+.padding-space {
+  padding: 160px 0;
+}
+
 .default-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4369,6 +4381,7 @@ textarea {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .default-link__text {
@@ -4434,7 +4447,7 @@ textarea {
 
 .header.is-scroll:not(.menu-open) .header__body,
 .header.dark:not(.menu-open) .header__body {
-  min-height: 131px;
+  min-height: 85px;
 }
 
 .header.is-scroll:not(.menu-open) .header__logo,
@@ -5909,6 +5922,83 @@ textarea {
   color: inherit;
 }
 
+.download__list > li:not(:last-child) {
+  margin-bottom: 46px;
+}
+
+.download-card {
+  display: block;
+  background-color: #454545;
+  color: #fff;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.download-card__img {
+  min-height: 319px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 37.5%;
+          flex: 0 0 37.5%;
+  overflow: hidden;
+}
+
+.download-card__img img {
+  -webkit-transition: all 1.4s ease;
+  -o-transition: all 1.4s ease;
+  transition: all 1.4s ease;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+}
+
+.download-card__text-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 65px 50px 45px 0;
+}
+
+.download-card__title {
+  margin-bottom: 0.5em;
+}
+
+.download-card__text {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.005em;
+  line-height: 1.5em;
+}
+
+.more-loading {
+  text-align: center;
+  padding-top: 160px;
+}
+
+@media (min-width: 768px) {
+  .download-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .download-card__img:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -1px;
+    height: 100%;
+    width: 160px;
+    background-color: #454545;
+    z-index: 2;
+    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+}
+
 @media (min-width: 992px) {
   .select__option:hover {
     background: rgba(69, 69, 69, 0.3);
@@ -6015,6 +6105,20 @@ textarea {
   .team__email:hover {
     color: #59fed1;
   }
+
+  .download-card:hover {
+    background-color: #59fed1;
+  }
+
+  .download-card:hover .download-card__img::before {
+    background-color: #59fed1;
+  }
+
+  .download-card:hover .download-card__img img {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
 }
 
 @media (min-width: 1920px) {
@@ -6120,6 +6224,14 @@ textarea {
 
   .title-1 {
     font-size: 80px;
+  }
+
+  .title-5 {
+    font-size: 34px;
+  }
+
+  .padding-space {
+    padding: 100px 0;
   }
 
   .header__body {
@@ -6239,6 +6351,22 @@ textarea {
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
+
+  .download-card__img {
+    min-height: 280px;
+  }
+
+  .download-card__text-wrap {
+    padding: 30px 20px 25px 0;
+  }
+
+  .download-card__text-wrap {
+    padding: 30px 20px;
+  }
+
+  .more-loading {
+    padding-top: 100px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -6252,6 +6380,14 @@ textarea {
 
   .title-3 {
     font-size: 56px;
+  }
+
+  .title-5 {
+    font-size: 30px;
+  }
+
+  .padding-space {
+    padding: 50px 0;
   }
 
   .header.is-scroll:not(.menu-open) .header__body,
@@ -6394,6 +6530,14 @@ textarea {
 
   .team__list {
     font-size: 6px;
+  }
+
+  .download-card__text {
+    font-size: 18px;
+  }
+
+  .more-loading {
+    padding-top: 50px;
   }
 }
 

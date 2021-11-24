@@ -250,6 +250,18 @@ textarea {
 }
 
 .title-5 {
+	font-size: 48px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0.005em;
+	line-height: 1.25em;
+
+	@media (max-width: $md2+px) {
+		font-size: 34px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 30px;
+	}
 }
 .title-6 {
 }
@@ -258,7 +270,7 @@ textarea {
 	position: relative;
 	&:before {
 		position: absolute;
-		content: '';
+		content: "";
 		top: 0.13888em;
 		left: -0.208em;
 		width: 0.3888em;
@@ -278,6 +290,17 @@ textarea {
 }
 
 .text {
+}
+
+.padding-space {
+	padding: 160px 0;
+
+	@media (max-width: $md2+px) {
+		padding: 100px 0;
+	}
+	@media (max-width: $md3+px) {
+		padding: 50px 0;
+	}
 }
 // === and title ========================================================================
 
@@ -300,7 +323,7 @@ button.btn-default {
 }
 
 .default-link {
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
 	width: 100%;
 	max-width: 207px;
@@ -323,6 +346,7 @@ button.btn-default {
 	&__icon {
 		transition: all 0.3s ease;
 		margin-bottom: 10px;
+		text-align: left;
 	}
 
 	&__text {
@@ -383,8 +407,7 @@ button.btn-default {
 		padding-left: 1.3em;
 		margin-bottom: 1.2em;
 
-		& > li  {
-
+		& > li {
 		}
 	}
 
@@ -423,5 +446,6 @@ button.btn-default {
 @import "pages/home";
 @import "pages/subscribe";
 @import "pages/team";
+@import "pages/download";
 
 // ==== AND PAGES =====================================================
