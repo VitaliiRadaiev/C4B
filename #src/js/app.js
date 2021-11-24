@@ -85,3 +85,4 @@ window.addEventListener('DOMContentLoaded', function () {
 	@@include('../common/promo/promo.js');
 
 });
+
