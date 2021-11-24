@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Project</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+		
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <header class="header dark">
+    <div class="header__body container">
+        <div class="header__logo logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="logo">
+            </a>
+        </div>
+        <div class="header__burger">
+            <div class="burger-wrap">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div> 
+    </div>
+</header>
+
+
+<div class="menu">
+    <div class="dec-1">
+        <img src="img/photo/wabe1.svg" alt="">
+    </div>
+    <div class="dec-2">
+        <img src="img/photo/wabe1.svg" alt="">
+    </div>
+
+    <div class="menu__bg ibg">
+        <img src="img/photo/menu-bg.jpg" alt="">
+    </div>
+    <div class="menu__scroll-wrap container">
+        <ul class="menu__list">
+            <li>
+                <a href="#" class="menu__link">
+                    das projekt
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    team
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    trittsteinbiotope
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    monitoring
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    aktuelles
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    downloads
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    anmeldung
+                </a>
+            </li>
+        </ul>
+        <ul class="menu__mobile-nav">
+            <li>
+                <a href="#" class="">
+                    Impressum     	
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">Datenschutz</a>
+            </li>
+            <li>
+                <a href="#" class="">Barrierefreiheit</a>
+            </li>
+            <li>
+                <a href="#" class="">Kontakt</a>
+            </li>
+        </ul>
+        <ul class="social">
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/youtube.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="menu__copy">
+            © 2021 - Bundesforschungs- und Ausbildungszentrum für Wald, Naturgefahren und Landschaft
+        </div>
+    </div>
+</div> 
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page biotope-page">
+        <section class="hero">
+            <div class="dec">
+                <img src="img/photo/wabe1.svg" alt="">
+            </div>
+            <div class="hero__bg ibg">
+                <img src="img/photo/hero-bg.jpg" alt="">
+            </div>
+            <div class="hero__body container-sm">
+                <h1 class="hero__title title-1">Trittsteinbiotope</h1>
+            </div>
+        </section>
+
+        <section class="text-block">
+            <div class="container-sm">
+                <div class="text-content">
+                    <p class="big-text">
+                        Trittsteinbiotope sind - mehr oder weniger regelmäßig - verteilte Flächen, deren
+                        Standortbedingungen zahlreichen Tier- und Pflanzenarten einen zeitweisen Lebensraum bieten.
+                    </p>
+                    <div class="float-right">
+                        <img src="img/photo/biotop-img.png" alt="">
+                    </div>
+                    <p>
+                        Eine Vernetzung von ansonsten isolierten Lebensräumen und die Ausbreitung von Arten mit einer
+                        begrenzten Reichweite wird dadurch ermöglicht. Für viele Arten - darunter beispielsweise
+                        Säugetiere, Insekten, Moose und Flechten - stellen Trittsteinbiotope Refugien dar.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="biotope-info">
+            <div class="dec">
+                <img src="img/photo/wabe1-dark.svg" alt="">
+            </div>
+            <div class="biotope-info__body container-sm">
+                <div class="biotope-info__col-1">
+                    <div class="biotope-info__text-wrap">
+                        <h3 class="biotope-info__title title-3 with-line">
+                            Habitat-
+                            Fragmentierung
+                        </h3>
+                        <div class="text-content">
+                            <p>
+                                Fragmentierung bezeichnet den Prozess der Zerschneidung der Landschaft und der
+                                Verinselung von Lebensräumen. Diese wird beispielsweise verursacht durch eine intensive
+                                Landnutzung für die landwirtschaftliche Produktion, durch Schienen- und Autobahnstrecken
+                                oder durch den Siedlungsbau.
+                            </p>
+                            <p>
+                                Die Verkleinerung und der Verlust von Lebensräumen beschleunigen den Verlust von
+                                Populationen und Arten. Die Barrieren und Distanzen verhindern den Zugang zu Ressourcen
+                                und die Migration in neue Lebensräume und verursachen eine Isolation von Populationen
+                                einer Art, die letztendlich das Aussterberisiko steigern.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="biotope-info__col-2">
+                    <div class="biotope-info__text-wrap">
+                        <div class="text-content">
+
+                            <p>
+                                <strong>Die Habitat-Fragmentierung umfasst mehrere Prozesse:</strong>
+                            </p>
+
+                            <ul>
+                                <li>
+                                    (a) eine Erhöhung der Anzahl von Habitatfragmenten
+                                    <img src="img/photo/biotope-info-img-1.png" alt="">
+                                </li>
+                                <li>
+                                    (b) eine Erhöhung der Distanz zwischen den Fragmenten
+                                    <img src="img/photo/biotope-info-img-2.png" alt="">
+                                </li>
+                                <li>
+                                    (c) eine Verkleinerung der Fragmente
+                                    <img src="img/photo/biotope-info-img-3.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="quote-section padding-space">
+            <div class="container-sm">
+                <div class="quote-section__body">
+                    <span class="quote"></span>
+                    Fragmentierung zählt zu einer
+                    der Hauptgefährdungsursachen
+                    der Biodiversität!
+                </div>
+            </div>
+        </div>
+
+        <section class="text-block pt-0">
+            <div class="dec-trees">
+                <img src="img/photo/trees-dec.png" alt="">
+            </div>
+            <div class="container-sm">
+                <div class="text-content">
+                    <h3>Habitat-Vernetzung</h3>
+
+                    <p>
+                        Die Habitat-Vernetzung ist ein Schlüsselfaktor zur Erhaltung und Förderung der Biodiversität.
+                        Sie stellt die Basis für ökologische Prozesse wie Genfluss und Migration dar. Auch ermöglicht
+                        sie die Ausbreitung und Wiederbesiedlung von Gebieten durch bedrohte Populationen (Tiere,
+                        Pflanzen und Pilze). Die Migration von Arten ist insbesondere unter den zu erwarteten Folgen des
+                        Klimawandels von hoher Bedeutung.
+                    </p>
+                    <ul>
+                        <li>
+                            Es sind zwei wichtige Aspekte zu berücksichtigen:
+                        </li>
+                        <li>
+                            a) die strukturelle Vernetzung
+                        </li>
+                        <li>
+                            b) die funktionale Vernetzung
+                        </li>
+                    </ul>
+                    <p>
+                        Die strukturelle Vernetzung umfasst die räumliche Verteilung der Trittsteinbiotope, deren
+                        Distanz zueinander und deren Größe.
+                        Die funktionale Vernetzung bezieht sich auf die Lebensraum-Eigenschaften der Flächen, wie
+                        Waldstrukturen und Standortsbedingungen.
+                        Beide Aspekte sind bei der Förderung der Ausbreitungsmöglichkeiten verschiedener Arten zu
+                        berücksichtigen.
+                    </p>
+                    <p>
+                        Trittsteinbiotope bilden einen Baustein im Konzept zur Förderung der Habitat-Vernetzung. Die
+                        kleinen Flächen ermöglichen Populationen und Arten eine (zeitweise) Besiedlung oder erlauben
+                        eine Reproduktion. Viele Arten können die Trittsteinbiotope als Refugien bzw. zur Ausbreitung
+                        nutzen, darunter beispielsweise Säugetiere, Insekten, Moose und Flechten.
+                    </p>
+                    <p>
+                        Sie sind Ausgangspunkt oder Zwischenstation zur Vernetzung ansonsten isolierter Lebensräume und
+                        ermöglichen die Ausbreitung von Arten mit einer begrenzten Reichweite. Neben den
+                        Trittsteinbiotopen kann die Habitat-Vernetzung auch durch Wanderkorridore gefördert werden.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    <footer class="footer">
+    <div class="footer__decor">
+        <img class="_anim fadeInUp" src="img/photo/wabe1.svg" alt="">
+    </div>
+    <div class="footer__body container">
+        <div class="footer__top _anim fadeIn">
+            <img class="" src="img/photo/EU_Banner@2x.jpg" alt="">
+        </div>
+        <div class="footer__mid">
+            <div class="footer__logo _anim fadeInUp">
+                <a href="#">
+                    <img class="img-svg" src="img/logo/footer-logo-4.svg" alt=""> 
+                </a>
+            </div>
+            <ul class="social _anim fadeInUp">
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/youtube.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copy _anim fadeInUp">
+                © 2021 - Bundesforschungs- und Ausbildungszentrum für Wald, Naturgefahren und Landschaft
+            </div>
+            <ul class="footer__nav _anim fadeInUp">
+                <li>
+                    <a href="#" class="footer__nav-link">
+                        Impressum     	
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="footer__nav-link">Datenschutz</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__nav-link">Barrierefreiheit</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__nav-link">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    <!-- == // FOOTER ================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+</body>
+
+</html>

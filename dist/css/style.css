@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "Neufreit";
   font-display: swap;
@@ -4396,11 +4398,49 @@ textarea {
   cursor: pointer;
 }
 
+.float-right {
+  float: right;
+  margin-bottom: 1.2em;
+}
+
+.float-right img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
 .text-content {
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 0.005em;
   line-height: 1.6em;
+}
+
+.text-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.text-content h3 {
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  line-height: 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.text-content h3:before {
+  position: absolute;
+  content: "";
+  top: 0.13888em;
+  left: -0.208em;
+  width: 0.3888em;
+  height: 0.819em;
+  background-color: #323232;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .text-content p {
@@ -4409,6 +4449,14 @@ textarea {
 
 .text-content p.big-text {
   font-size: 40px;
+}
+
+.text-content p ~ h3 {
+  margin-top: 1.6em;
+}
+
+.text-content ul {
+  margin-bottom: 1.2em;
 }
 
 .text-content ol {
@@ -5531,6 +5579,23 @@ textarea {
   position: relative;
 }
 
+.text-block .dec-trees {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  max-width: 535px;
+  -webkit-transform: translateX(46%);
+      -ms-transform: translateX(46%);
+          transform: translateX(46%);
+  z-index: -1;
+}
+
+.text-block .dec-trees img {
+  width: 100%;
+  height: auto;
+}
+
 .dec {
   position: absolute;
   top: 50%;
@@ -5975,6 +6040,113 @@ textarea {
   padding-top: 160px;
 }
 
+.biotope-info {
+  position: relative;
+}
+
+.biotope-info .dec {
+  top: 0;
+  right: auto;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%);
+      -ms-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  z-index: -1;
+  max-width: 413px;
+}
+
+.biotope-info__col-1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  position: relative;
+}
+
+.biotope-info__col-1:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50vw;
+  min-width: calc(100% + 40px);
+  background-color: #454545;
+}
+
+.biotope-info__col-1 .biotope-info__text-wrap {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 120px 70px 120px 0;
+}
+
+.biotope-info__col-2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding-left: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.biotope-info__col-2 .text-content ul > li:not(:last-child) {
+  margin-bottom: 0.8em;
+}
+
+.biotope-info__col-2 .text-content ul img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.biotope-info__title {
+  margin-bottom: 0.8em;
+}
+
+.biotope-info__title::before {
+  height: calc(100% - 0.18em);
+}
+
+.quote-section {
+  font-size: 10px;
+}
+
+.quote-section__body {
+  max-width: 996px;
+  margin: 0 auto;
+  border-top: 1px solid #454545;
+  border-bottom: 1px solid #454545;
+  padding: 1.041em 1.5625em 1.041em 4.125em;
+  font-size: 4.8em;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.005em;
+  line-height: 1.5em;
+  position: relative;
+}
+
+.quote-section__body .quote {
+  position: absolute;
+  left: 0.285em;
+  top: 33%;
+  font-size: 5.83333em;
+  font-family: "Neufreit", sans-serif;
+}
+
+.quote:before {
+  content: "”";
+}
+
 @media (min-width: 768px) {
   .download-card {
     display: -webkit-box;
@@ -6119,6 +6291,16 @@ textarea {
         -ms-transform: scale(1.05);
             transform: scale(1.05);
   }
+
+  .biotope-info__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .biotope-info__col-2 .biotope-info__text-wrap {
+    max-width: 480px;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -6172,6 +6354,10 @@ textarea {
     left: -0.08em;
   }
 
+  .text-content h3:before {
+    left: -0.08em;
+  }
+
   .news-list__item.big .news-list__subtitle {
     font-size: 16px;
   }
@@ -6214,6 +6400,14 @@ textarea {
 
   .team__list {
     font-size: 8px;
+  }
+
+  .biotope-info__col-1 .biotope-info__text-wrap {
+    padding-right: 50px;
+  }
+
+  .biotope-info__col-2 {
+    padding-left: 50px;
   }
 }
 
@@ -6367,11 +6561,32 @@ textarea {
   .more-loading {
     padding-top: 100px;
   }
+
+  .biotope-info__col-1:before {
+    right: auto;
+    left: 50%;
+    width: 100vw;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+
+  .biotope-info__col-1 .biotope-info__text-wrap {
+    padding: 80px 0;
+  }
+
+  .biotope-info__col-2 {
+    padding: 80px 0;
+  }
+
+  .quote-section {
+    font-size: 7px;
+  }
 }
 
 @media (max-width: 767.98px) {
   .title-1 {
-    font-size: 70px;
+    font-size: 50px;
   }
 
   .title-2 {
@@ -6388,6 +6603,10 @@ textarea {
 
   .padding-space {
     padding: 50px 0;
+  }
+
+  .text-content h3 {
+    font-size: 56px;
   }
 
   .header.is-scroll:not(.menu-open) .header__body,
@@ -6539,6 +6758,18 @@ textarea {
   .more-loading {
     padding-top: 50px;
   }
+
+  .biotope-info__col-1 .biotope-info__text-wrap {
+    padding: 50px 0;
+  }
+
+  .biotope-info__col-2 {
+    padding: 50px 0;
+  }
+
+  .quote-section {
+    font-size: 5px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -6582,7 +6813,7 @@ textarea {
   }
 
   .title-1 {
-    font-size: 50px;
+    font-size: 34px;
   }
 
   .title-2 {
@@ -6590,6 +6821,10 @@ textarea {
   }
 
   .title-3 {
+    font-size: 40px;
+  }
+
+  .text-content h3 {
     font-size: 40px;
   }
 
@@ -6628,6 +6863,19 @@ textarea {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
+  }
+
+  .quote-section {
+    font-size: 4px;
+  }
+
+  .quote-section__body {
+    padding: 1.041em 1.5625em 1.041em 1.8em;
+  }
+
+  .quote-section__body .quote {
+    left: -0.04em;
+    top: 28%;
   }
 }
 
