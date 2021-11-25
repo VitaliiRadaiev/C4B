@@ -134,6 +134,34 @@
                 }
             }
         }
+
+        &:nth-child(4n+6), &:nth-child(4n+7) {
+            @media (min-width: 992px) {
+                & .news-list__img  {
+                    right: auto;
+                    left: 0;
+                }
+
+                & .news-list__text-wrap {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+
+        &:nth-child(2n+5) {
+            @media (min-width: 480px) and (max-width: $md2+px) {
+                & .news-list__img  {
+                    right: auto;
+                    left: 0;
+                }
+
+                & .news-list__text-wrap {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
     }
 
     &__img {

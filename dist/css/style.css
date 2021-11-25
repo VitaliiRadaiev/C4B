@@ -6255,6 +6255,18 @@ textarea {
             transform: scale(1.05);
   }
 
+  .news-list__item:nth-child(4n+6) .news-list__img,
+  .news-list__item:nth-child(4n+7) .news-list__img {
+    right: auto;
+    left: 0;
+  }
+
+  .news-list__item:nth-child(4n+6) .news-list__text-wrap,
+  .news-list__item:nth-child(4n+7) .news-list__text-wrap {
+    left: auto;
+    right: 0;
+  }
+
   .news-list__text-wrap:hover .news-list__title {
     color: #59fed1;
   }
@@ -6903,6 +6915,18 @@ textarea {
   .quote-section__body .quote {
     left: -0.04em;
     top: 28%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 991.98px) {
+  .news-list__item:nth-child(2n+5) .news-list__img {
+    right: auto;
+    left: 0;
+  }
+
+  .news-list__item:nth-child(2n+5) .news-list__text-wrap {
+    left: auto;
+    right: 0;
   }
 }
 
