@@ -4359,6 +4359,10 @@ textarea {
   padding: 160px 0;
 }
 
+.pb {
+  padding-bottom: 160px;
+}
+
 .default-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -6058,6 +6062,7 @@ textarea {
 
 .biotope-info .dec {
   top: 0;
+  bottom: auto !important;
   right: auto;
   left: 50%;
   -webkit-transform: translate(-50%, -30%);
@@ -6129,6 +6134,12 @@ textarea {
   height: calc(100% - 0.18em);
 }
 
+.biotope-info__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .quote-section {
   font-size: 10px;
 }
@@ -6157,6 +6168,22 @@ textarea {
 
 .quote:before {
   content: "”";
+}
+
+.monitoring-page .biotope-info .biotope-info__col-2 {
+  display: block;
+}
+
+.monitoring-page .biotope-info .biotope-info__col-2 .biotope-info__text-wrap {
+  padding: 120px 0;
+}
+
+.monitoring-page .biotope-info .biotope-info__col-2 .biotope-info__title::before {
+  background-color: #323232;
+}
+
+.monitoring-page .biotope-info .biotope-info__col-2 .text-content {
+  line-height: 1.333em;
 }
 
 @media (min-width: 768px) {
@@ -6438,11 +6465,11 @@ textarea {
   }
 
   .biotope-info__col-1 .biotope-info__text-wrap {
-    padding-right: 50px;
+    padding-right: 40px;
   }
 
   .biotope-info__col-2 {
-    padding-left: 50px;
+    padding-left: 40px;
   }
 }
 
@@ -6461,6 +6488,10 @@ textarea {
 
   .padding-space {
     padding: 100px 0;
+  }
+
+  .pb {
+    padding-bottom: 100px;
   }
 
   .header__body {
@@ -6617,6 +6648,14 @@ textarea {
   .quote-section {
     font-size: 7px;
   }
+
+  .monitoring-page .biotope-info .biotope-info__col-2 {
+    padding: 0;
+  }
+
+  .monitoring-page .biotope-info .biotope-info__col-2 .biotope-info__text-wrap {
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -6638,6 +6677,10 @@ textarea {
 
   .padding-space {
     padding: 50px 0;
+  }
+
+  .pb {
+    padding-bottom: 50px;
   }
 
   .text-content h3 {
@@ -6804,6 +6847,10 @@ textarea {
 
   .quote-section {
     font-size: 5px;
+  }
+
+  .monitoring-page .biotope-info .biotope-info__col-2 .biotope-info__text-wrap {
+    padding: 50px 0;
   }
 }
 

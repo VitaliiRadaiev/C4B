@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Project</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+		
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <header class="header dark">
+    <div class="header__body container">
+        <div class="header__logo logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="logo">
+            </a>
+        </div>
+        <div class="header__burger">
+            <div class="burger-wrap">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div> 
+    </div>
+</header>
+
+
+<div class="menu">
+    <div class="dec-1">
+        <img src="img/photo/wabe1.svg" alt="">
+    </div>
+    <div class="dec-2">
+        <img src="img/photo/wabe1.svg" alt="">
+    </div>
+
+    <div class="menu__bg ibg">
+        <img src="img/photo/menu-bg.jpg" alt="">
+    </div>
+    <div class="menu__scroll-wrap container">
+        <ul class="menu__list">
+            <li>
+                <a href="#" class="menu__link">
+                    das projekt
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    team
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    trittsteinbiotope
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    monitoring
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    aktuelles
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    downloads
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">
+                    anmeldung
+                </a>
+            </li>
+        </ul>
+        <ul class="menu__mobile-nav">
+            <li>
+                <a href="#" class="">
+                    Impressum     	
+                </a>
+            </li>
+            <li>
+                <a href="#" class="">Datenschutz</a>
+            </li>
+            <li>
+                <a href="#" class="">Barrierefreiheit</a>
+            </li>
+            <li>
+                <a href="#" class="">Kontakt</a>
+            </li>
+        </ul>
+        <ul class="social">
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/youtube.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="menu__copy">
+            © 2021 - Bundesforschungs- und Ausbildungszentrum für Wald, Naturgefahren und Landschaft
+        </div>
+    </div>
+</div> 
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page monitoring-page">
+        <section class="hero">
+            <div class="dec">
+                <img src="img/photo/wabe1.svg" alt="">
+            </div>
+            <div class="hero__bg ibg">
+                <img src="img/photo/hero-bg.jpg" alt="">
+            </div>
+            <div class="hero__body container-sm">
+                <h1 class="hero__title title-1">Monitoring</h1>
+            </div>
+        </section>
+
+        <section class="text-block">
+            <div class="container-sm">
+                <div class="text-content">
+                    <p class="big-text">
+                        Ziel des Monitorings ist es, Daten über den Zustand der biologischen Vielfalt auf möglichst
+                        umfangreicher Ebene zu erheben. ConnectforBio verfolgt dabei einen artenübergreifender Ansatz.
+                    </p>
+                    <div class="float-right">
+                        <img src="img/photo/Artenliste.jpg" alt="">
+                    </div>
+                    <p>
+                        Eine Auswahl unterschiedlicher taxonomischer Gruppen wird in das RBA (Rapid Biodiversity
+                        Assessment) einbezogen, deren Bandbreite von der Erfassung von Säugetieren und Vögeln bis hin
+                        zur Bestimmung von Moosen und Informationen für die Beurteilung der Waldstruktur reicht (siehe
+                        Abbildung der Arten).
+                    </p>
+                    <p>
+                        Die Auswahl der Artengruppen wurde unter Berücksichtigung der Schwerpunktthemen für die
+                        Flächenauswahl getroffen. Die Erhebung weiterer Artengruppen wird im Rahmen von Folge- und
+                        Erweiterungsprojekten angestrebt.
+                    </p>
+                    <p>
+                        Aufgrund der großen Anzahl an Flächen, die im Rahmen des Projekts eingerichtet und untersucht
+                        werden (bis zu 1.000 Flächen in mindestens fünf Bundesländern Österreichs), unterscheiden sich
+                        die Erhebungen in Bezug auf die Parameter die erfasst werden, und deren Detailgrad zwischen
+                        Standard-Plots und Intensiv-Plots. Auf allen Trittsteinbiotop-Flächen wird eine
+                        Standard-Plot-Erhebung durchgeführt, während die Intensiv-Plot-Erhebung (zusätzlich) auf einer
+                        kleinen Anzahl an Flächen durchgeführt wird.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="biotope-info pb">
+            <div class="biotope-info__body container-sm">
+                <div class="biotope-info__col-1">
+                    <div class="biotope-info__text-wrap">
+                        <h3 class="biotope-info__title title-3 with-line">
+                            Standard-Plot-
+                            Erhebungen
+                        </h3>
+                        <div class="text-content">
+                            <p>
+                                Bei den Standard-Plot-Erhebungen werden ausschließlich die Informationen gesammelt, die
+                                zum Zeitpunkt der Probenahme sofort erhoben werden können und zwar ohne saisonal
+                                bedingte Limits oder die Notwendigkeit von Fallen oder anderen Geräten, die die
+                                Artenaufzeichnungen über einen gewissen Zeitraum dokumentieren.
+                            </p>
+                            <p>
+                                Dazu gehören Daten über die Waldstruktur, Mikrohabitate, Vegetation, Totholz,
+                                totholzbewohnende Insekten, mehrjährige Pilzarten und Flechtengruppen.
+                            </p>
+                            <p>
+                                Bei den meisten der durch die Standard-Plot-Erhebung gesammelten Daten handelt es sich
+                                um einheitliche Parameter, die neben der Erhebung der biologischen Vielfalt auch
+                                Auswertungen auf breiterer Ebene unterstützen können (d.h. jene Messungen, die den ICP-,
+                                NWR-, oder ÖWI-Methoden folgen), und die Rückschlüsse über Empfehlungen für die
+                                forstliche Praxis erlauben.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="biotope-info__col-2">
+                    <div class="biotope-info__text-wrap">
+                        <h3 class="biotope-info__title title-3 with-line">
+                            Intensiv-Plot-
+                            Erhebungen
+                        </h3>
+                        <div class="text-content">
+                            <p>
+                                Die Intensiv-Plot-Erhebung wird ergänzend auf einem kleinen Anteil der Flächen des Projekts durchgeführt (~10 %). 
+                            </p>
+                            <p>
+                                Auf den Intensiv-Plots finden zusätzliche Messungen und Probenahmen statt - einschließlich der Erfassung von Säugetieren und Vögeln, einer detaillierteren Dokumentation von Pilzen und Insekten, sowie der Probennahme für Umwelt-DNA Analysen. 
+                            </p>
+                            <p>
+                                Diese Informationen ermöglichen die Beantwortung von Detailfragen und ermöglichen ein tieferes Verständnis der Beziehungen zwischen der Biodiversität und den Untersuchungsparametern, was insbesondere im Hinblick auf den Klimawandel entscheidend ist.
+                            </p>
+                        </div>
+             
+                    </div>
+                    <div class="biotope-info__img">
+                        <img src="img/photo/Monitorings.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    <footer class="footer">
+    <div class="footer__decor">
+        <img class="_anim fadeInUp" src="img/photo/wabe1.svg" alt="">
+    </div>
+    <div class="footer__body container">
+        <div class="footer__top _anim fadeIn">
+            <img class="" src="img/photo/EU_Banner@2x.jpg" alt="">
+        </div>
+        <div class="footer__mid">
+            <div class="footer__logo _anim fadeInUp">
+                <a href="#">
+                    <img class="img-svg" src="img/logo/footer-logo-4.svg" alt=""> 
+                </a>
+            </div>
+            <ul class="social _anim fadeInUp">
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/youtube.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/twitter.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copy _anim fadeInUp">
+                © 2021 - Bundesforschungs- und Ausbildungszentrum für Wald, Naturgefahren und Landschaft
+            </div>
+            <ul class="footer__nav _anim fadeInUp">
+                <li>
+                    <a href="#" class="footer__nav-link">
+                        Impressum     	
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="footer__nav-link">Datenschutz</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__nav-link">Barrierefreiheit</a>
+                </li>
+                <li>
+                    <a href="#" class="footer__nav-link">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    <!-- == // FOOTER ================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+</body>
+
+</html>

@@ -5,6 +5,7 @@
 
     & .dec {
         top: 0;
+        bottom: auto !important;
         right: auto;
         left: 50%;
         transform: translate(-50%, -30%);
@@ -47,7 +48,7 @@
             padding: 120px 70px 120px 0;
 
             @media (max-width: $md1+px) {
-                padding-right: 50px;
+                padding-right: 40px;
             }
 
             @media (max-width: $md2+px) {
@@ -67,7 +68,7 @@
         justify-content: center;
 
         @media (max-width: $md1+px) {
-            padding-left: 50px;
+            padding-left: 40px;
         }
 
         @media (max-width: $md2+px) {
@@ -110,6 +111,14 @@
 
         &::before {
             height: calc(100% - 0.18em);
+        }
+    }
+
+    &__img {
+        & img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     }
 }
