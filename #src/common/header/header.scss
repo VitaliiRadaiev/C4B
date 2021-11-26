@@ -47,7 +47,7 @@
         max-width: 286px;
         transition: all 0.4s ease;
         margin-right: 30px;
-        & img {
+        & img, & svg {
             width: 100%;
             height: auto;
         }
@@ -55,12 +55,26 @@
         @media (max-width: $md3+px) {
             max-width: 240px;
         }
+
+        & svg {
+            & tspan, & path {
+                transition: all .3s ease;
+            }
+        }
+
+        &:not(:hover) {
+            & svg {
+                & tspan, & path {
+                    fill: #fff !important;
+                }
+            }
+        }
     }
 
     &__burger {
         flex: 0 0 auto;
         cursor: pointer;
-        transition: all 0.4s ease;
+
         & img {
             width: 100%;
             height: auto;
@@ -69,6 +83,14 @@
         & .burger {
             @media (max-width: $md3+px) {
                 font-size: 6px;
+            }
+
+            transition: all 0.4s ease;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    opacity: 0.8;
+                }
             }
         }
     }
@@ -264,9 +286,16 @@
         font-style: normal;
         letter-spacing: 0.005em;
         line-height: 1em;
+        transition: all .3s ease;
 
         @media (max-width: $md3+px) {
             font-size: 26px;
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $mainColor;
+            }
         }
     }
 

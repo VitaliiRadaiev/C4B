@@ -11,6 +11,8 @@
         padding: 50px 0;
     }
 
+    & .container-sm {max-width: 1535px;}
+
     &__list {
         font-size: 10px;
         display: flex;
@@ -28,7 +30,7 @@
             flex: 0 1 33.33333%;
             padding: 0 1.5em;
             text-align: center;
-            margin-bottom: 10em;
+            margin-bottom: 11.5em;
 
             @media (max-width: $md2+px) {
                 flex: 0 1 50%;
@@ -57,7 +59,7 @@
     &__position {
         font-size: 2.8em;
         line-height: 1.2em;
-        margin-bottom: 0.666em;
+        margin-bottom: 1.1em;
     }
 
     &__email {

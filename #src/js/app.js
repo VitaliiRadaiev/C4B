@@ -43,7 +43,9 @@ window.addEventListener('load', function () {
 	if(castomLinks.length) {
 		castomLinks.forEach(link => {
 			let src = link.dataset.href;
-			link.addEventListener('click', () => {
+			link.addEventListener('click', (e) => {
+				e.preventDefault();
+				e.stopPropagation();
 				window.location.href = src;
 			})
 		})
@@ -83,6 +85,18 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 
 	@@include('../common/promo/promo.js');
+
+	let hero = document.querySelector('.hero');
+	if(hero) {
+		let img = hero.querySelector('.hero__bg img');
+		let bg = hero.querySelector('.hero__bg');
+		let div = document.createElement('div');
+		div.className = 'bg-wrap layer';
+		div.append(img);
+		hero.classList.add('_parallax');
+		div.setAttribute('data-depth', '0.20');
+		bg.append(div);
+	}
 
 });
 

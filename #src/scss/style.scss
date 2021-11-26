@@ -387,7 +387,7 @@ button.btn-default {
 .text-content {
 	font-size: 30px;
 	font-weight: 400;
-	letter-spacing: 0.005em;
+	letter-spacing: 0.025em;
 	line-height: 1.6em;
 
 	@media (max-width: 575.98px) {
@@ -445,6 +445,8 @@ button.btn-default {
 
 		&.big-text {
 			font-size: 40px;
+			line-height: 1.5em;
+			letter-spacing: 0.01875em;
 
 			@media (max-width: 575.98px) {
 				font-size: 30px;

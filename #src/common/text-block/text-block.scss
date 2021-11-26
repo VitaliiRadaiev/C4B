@@ -24,6 +24,29 @@
             height: auto;
         }
     }
+
+    & .text-content {
+        letter-spacing: 0.025em;
+        line-height: 2em;
+
+        & p {
+            margin-bottom: 1.6em;
+
+            &.big-text {
+                font-size: 40px;
+                line-height: 1.5em;
+                letter-spacing: 0.01875em;
+    
+                @media (max-width: 575.98px) {
+                    font-size: 30px;
+                }
+            }
+
+            & ul, & ol, & figure, & table  {
+                margin-bottom: 1.6em;
+            }
+        }
+    }
 }
 
 .dec {

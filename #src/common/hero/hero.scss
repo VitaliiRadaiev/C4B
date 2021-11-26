@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-
+    overflow: hidden;
     & .dec {
         position: absolute;
         top: auto;
@@ -22,14 +22,24 @@
 
     &__bg {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: -50px;
+        left: 50%;
+        height: calc(100% + 100px);
+        width: calc(100% + 100px);
+        transform: translateX(-50%);
         z-index: 1;
+        overflow: hidden;
 
         & img {
             object-position: 0 30%;
+        }
+
+        & .bg-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         &:before {

@@ -4417,7 +4417,7 @@ textarea {
 .text-content {
   font-size: 30px;
   font-weight: 400;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.025em;
   line-height: 1.6em;
 }
 
@@ -4453,6 +4453,8 @@ textarea {
 
 .text-content p.big-text {
   font-size: 40px;
+  line-height: 1.5em;
+  letter-spacing: 0.01875em;
 }
 
 .text-content p ~ h3 {
@@ -4546,9 +4548,22 @@ textarea {
   margin-right: 30px;
 }
 
-.header__logo img {
+.header__logo img,
+.header__logo svg {
   width: 100%;
   height: auto;
+}
+
+.header__logo svg tspan,
+.header__logo svg path {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__logo:not(:hover) svg tspan,
+.header__logo:not(:hover) svg path {
+  fill: #fff !important;
 }
 
 .header__burger {
@@ -4556,14 +4571,17 @@ textarea {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
 .header__burger img {
   width: 100%;
   height: auto;
+}
+
+.header__burger .burger {
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .menu {
@@ -4817,6 +4835,9 @@ textarea {
   font-style: normal;
   letter-spacing: 0.005em;
   line-height: 1em;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .menu__mobile-nav {
@@ -5103,12 +5124,12 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
-  padding-top: 270px;
+  padding-top: 210px;
   padding-bottom: 270px;
 }
 
 .promo__title {
-  margin-bottom: 1.4em;
+  margin-bottom: 1.6em;
 }
 
 .promo__bottom-arrow {
@@ -5526,6 +5547,7 @@ textarea {
 
 .hero {
   position: relative;
+  overflow: hidden;
 }
 
 .hero .dec {
@@ -5548,16 +5570,28 @@ textarea {
 
 .hero__bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -50px;
+  left: 50%;
+  height: calc(100% + 100px);
+  width: calc(100% + 100px);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 1;
+  overflow: hidden;
 }
 
 .hero__bg img {
   -o-object-position: 0 30%;
      object-position: 0 30%;
+}
+
+.hero__bg .bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hero__bg:before {
@@ -5610,6 +5644,28 @@ textarea {
 .text-block .dec-trees img {
   width: 100%;
   height: auto;
+}
+
+.text-block .text-content {
+  letter-spacing: 0.025em;
+  line-height: 2em;
+}
+
+.text-block .text-content p {
+  margin-bottom: 1.6em;
+}
+
+.text-block .text-content p.big-text {
+  font-size: 40px;
+  line-height: 1.5em;
+  letter-spacing: 0.01875em;
+}
+
+.text-block .text-content p ul,
+.text-block .text-content p ol,
+.text-block .text-content p figure,
+.text-block .text-content p table {
+  margin-bottom: 1.6em;
 }
 
 .dec {
@@ -5797,10 +5853,14 @@ textarea {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.3333%;
           flex: 0 1 33.3333%;
-  padding: 0 0.8em;
+  padding: 0.4em 0.8em 0.8em;
   display: block;
   text-align: center;
-  margin-bottom: 4em;
+  margin-bottom: 9em;
+}
+
+.partners.partners_v2 .partners__item img {
+  max-height: 130px;
 }
 
 .partners__title {
@@ -5853,17 +5913,37 @@ textarea {
   font-size: 2.5em;
   font-weight: 400;
   line-height: 1.6em;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background-color: transparent;
 }
 
 .partners__item img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100px;
   width: auto;
   height: auto;
 }
 
+.partners__item:active {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #ececec;
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.partners__item a {
+  color: #323232;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .partners__list-logo {
-  height: 8.4em;
+  height: 5.4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5896,11 +5976,16 @@ textarea {
           justify-content: space-between;
   max-width: 1160px;
   width: 100%;
+  font-size: 10px;
+}
+
+.subscribe-page-links__body > span {
+  font-size: 4em;
+  font-weight: 700;
 }
 
 .subscribe-page-links__item {
   margin: 25px 10px;
-  font-size: 10px;
   text-align: center;
   display: block;
   background-color: #454545;
@@ -5951,6 +6036,10 @@ textarea {
   padding: 160px 0;
 }
 
+.team .container-sm {
+  max-width: 1535px;
+}
+
 .team__list {
   font-size: 10px;
   display: -webkit-box;
@@ -5967,7 +6056,7 @@ textarea {
           flex: 0 1 33.33333%;
   padding: 0 1.5em;
   text-align: center;
-  margin-bottom: 10em;
+  margin-bottom: 11.5em;
 }
 
 .team__photo {
@@ -5987,7 +6076,7 @@ textarea {
 .team__position {
   font-size: 2.8em;
   line-height: 1.2em;
-  margin-bottom: 0.666em;
+  margin-bottom: 1.1em;
 }
 
 .team__email {
@@ -6229,6 +6318,14 @@ textarea {
     color: #59fed1;
   }
 
+  .header__burger .burger:hover {
+    opacity: 0.8;
+  }
+
+  .menu__link:hover {
+    color: #454545;
+  }
+
   .menu__mobile-nav {
     display: none;
   }
@@ -6248,6 +6345,10 @@ textarea {
   .news-list__item.big {
     -ms-grid-row-span: 2;
     grid-row: span 2;
+  }
+
+  .news-list__item.big .news-list__text-wrap {
+    padding: max(15px, 10%);
   }
 
   .news-list__item.big:hover .news-list__text-wrap {
@@ -6305,6 +6406,15 @@ textarea {
 
   .partners__body {
     min-height: 695px;
+  }
+
+  .partners__item:hover {
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .partners__item a:hover {
+    color: #59fed1;
   }
 
   .subscribe-page-links {
@@ -6373,7 +6483,7 @@ textarea {
 
 @media (max-width: 1700px) {
   .news-list__text-wrap {
-    padding: max(15px, 3%);
+    padding: max(15px, 4%);
   }
 }
 
@@ -6520,8 +6630,11 @@ textarea {
   }
 
   .promo__body {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: max(160px, 29vh);
+    padding-bottom: 220px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .news-list {
@@ -6532,6 +6645,11 @@ textarea {
 
   .news-list__item.big {
     padding-bottom: 100%;
+  }
+
+  .news-list__item.big .news-list__text-wrap {
+    padding-top: max(15px, 13%);
+    padding-bottom: max(15px, 13%);
   }
 
   .news-list__img {
@@ -6596,6 +6714,7 @@ textarea {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 33.333%;
             flex: 0 1 33.333%;
+    margin-bottom: 40px;
   }
 
   .subscribe-page-links {
@@ -6755,8 +6874,23 @@ textarea {
   }
 
   .promo__body {
-    padding-top: 150px;
     padding-bottom: 150px;
+  }
+
+  .news-list {
+    gap: 5px;
+  }
+
+  .news-list__img {
+    width: calc(50% - 2.5px);
+  }
+
+  .news-list__text-wrap {
+    width: calc(50% - 2.5px);
+  }
+
+  .news-list__text-wrap {
+    padding: max(15px, 5.5%);
   }
 
   .hero .dec {
@@ -6803,7 +6937,7 @@ textarea {
   }
 
   .partners__title {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   .partners__body {
@@ -6819,6 +6953,10 @@ textarea {
 
   .subscribe-page-links {
     padding: 50px 0;
+  }
+
+  .subscribe-page-links__body {
+    font-size: 5px;
   }
 
   .team {
@@ -6882,7 +7020,11 @@ textarea {
     text-align: left;
   }
 
-  .subscribe-page-links__item {
+  .text-block .text-content p.big-text {
+    font-size: 30px;
+  }
+
+  .subscribe-page-links__body {
     font-size: 4px;
   }
 }
@@ -6914,10 +7056,6 @@ textarea {
     font-size: 32px;
   }
 
-  .news-list__item {
-    padding-bottom: 100%;
-  }
-
   .news-list__item.big .news-list__subtitle {
     font-size: 12px;
   }
@@ -6930,13 +7068,16 @@ textarea {
     font-size: 16px;
   }
 
-  .news-list__img {
-    width: 100%;
+  .news-list__subtitle {
+    font-size: 8px;
   }
 
-  .news-list__text-wrap {
-    width: 100%;
-    background-color: rgba(69, 69, 69, 0.8);
+  .news-list__title {
+    font-size: 16px;
+  }
+
+  .news-list__text {
+    font-size: 10px;
   }
 
   .partners.partners_v2 .partners__item {
@@ -6962,6 +7103,34 @@ textarea {
   .quote-section__body .quote {
     left: -0.04em;
     top: 28%;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .news-list__item {
+    padding-bottom: 100%;
+  }
+
+  .news-list__img {
+    width: 100%;
+  }
+
+  .news-list__text-wrap {
+    width: 100%;
+    background-color: rgba(69, 69, 69, 0.8);
+    padding: 30px;
+  }
+
+  .news-list__subtitle {
+    font-size: 16px;
+  }
+
+  .news-list__title {
+    font-size: 22px;
+  }
+
+  .news-list__text {
+    font-size: 16px;
   }
 }
 
