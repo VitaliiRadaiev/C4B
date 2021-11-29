@@ -371,14 +371,14 @@ button.btn-default {
 
 // === TEXT CONTETN BLOCK ========================================================================
 .float-right {
-    float: right;
-    margin-bottom: 1.2em;
-    & img {
-        max-width: 100%;
-        max-height: 100%;
-        width: auto;
-        height: auto;
-    }
+	float: right;
+	margin-bottom: 1.2em;
+	& img {
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+	}
 }
 
 .text-content {
@@ -411,9 +411,20 @@ button.btn-default {
 		@media (max-width: $md4+px) {
 			font-size: 40px;
 		}
-		
 	}
 	& h2 {
+		font-size: 72px;
+		font-weight: 700;
+		letter-spacing: 0.005em;
+		line-height: 1em;
+		margin-bottom: 1em;
+
+		@media (max-width: $md3+px) {
+			font-size: 56px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 40px;
+		}
 	}
 	& h3 {
 		font-size: 72px;
@@ -421,7 +432,7 @@ button.btn-default {
 		letter-spacing: 0.005em;
 		line-height: 1em;
 		margin-bottom: 1em;
-	
+
 		@media (max-width: $md3+px) {
 			font-size: 51px;
 		}
@@ -429,28 +440,79 @@ button.btn-default {
 			font-size: 32px;
 		}
 
-		position: relative;
-		&:before {
-			position: absolute;
-			content: "";
-			top: 0.13888em;
-			left: -0.208em;
-			width: 0.3888em;
-			height: 0.819em;
+		& > strong {
+			display: inline-block;
 			background-color: $textColor;
-			transform: translateX(-100%);
-	
-			@media (max-width: $md1+px) {
-				left: -0.08em;
-			}
+			margin-bottom: 0.111111em;
+			padding: 0.111111em;
+			align-self: flex-start;
+			color: #fff;
 		}
+
+		// position: relative;
+		// &:before {
+		// 	position: absolute;
+		// 	content: "";
+		// 	top: 0.13888em;
+		// 	left: -0.208em;
+		// 	width: 0.3888em;
+		// 	height: 0.819em;
+		// 	background-color: $textColor;
+		// 	transform: translateX(-100%);
+
+		// 	@media (max-width: $md1+px) {
+		// 		left: -0.08em;
+		// 	}
+		// }
 	}
 	& h4 {
+		font-size: 48px;
+		font-weight: 700;
+		font-style: normal;
+		letter-spacing: 0.005em;
+		line-height: 1.25em;
+		margin-bottom: 1em;
+
+		@media (max-width: $md2+px) {
+			font-size: 34px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 30px;
+		}
+
+		&:before {
+			top: 0.21888em;
+		}
 	}
 
 	& h5 {
+		font-size: 36px;
+		font-weight: 700;
+		letter-spacing: 0.005em;
+		line-height: 1.25em;
+		margin-bottom: 1em;
+
+		@media (max-width: $md3+px) {
+			font-size: 28px;
+		}
 	}
 	& h6 {
+		font-size: 30px;
+		font-weight: 400;
+		letter-spacing: 0.005em;
+		text-transform: uppercase;
+		line-height: 1.25em;
+		margin-bottom: 1em;
+
+		@media (max-width: $md3+px) {
+			font-size: 24px;
+		}
+	}
+
+	& h1, & h2, & h3, & h4, & h5, & h6 {
+		&::before {
+			background-color: $textColor;
+		}
 	}
 
 	& p {
@@ -473,8 +535,14 @@ button.btn-default {
 
 	& ul {
 		margin-bottom: 1.2em;
-		& > li {
+		padding-left: 2.66em;
 
+		@media (max-width: 575.98px) {
+			padding-left: 1.5em;
+		}
+
+		& > li {
+			list-style: square;
 		}
 
 		&.square-list {
@@ -508,6 +576,12 @@ button.btn-default {
 	}
 
 	& figure {
+		margin-bottom: 4em;
+		& img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	& a {
@@ -547,5 +621,6 @@ button.btn-default {
 @import "pages/project-detail";
 @import "pages/news";
 @import "pages/monitoring";
+@import "pages/news-detail";
 
 // ==== AND PAGES =====================================================

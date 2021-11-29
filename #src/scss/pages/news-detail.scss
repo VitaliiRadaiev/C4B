@@ -1,0 +1,7 @@
+.news-detail-page {
+    & .text-block {
+        @media (min-width: 992px) {
+            margin-top: 150px;
+        }
+    }   
+}

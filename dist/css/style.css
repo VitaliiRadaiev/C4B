@@ -4426,26 +4426,69 @@ textarea {
   margin-bottom: 0.5em;
 }
 
+.text-content h2 {
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
 .text-content h3 {
   font-size: 72px;
   font-weight: 700;
   letter-spacing: 0.005em;
   line-height: 1em;
   margin-bottom: 1em;
-  position: relative;
 }
 
-.text-content h3:before {
-  position: absolute;
-  content: "";
-  top: 0.13888em;
-  left: -0.208em;
-  width: 0.3888em;
-  height: 0.819em;
+.text-content h3 > strong {
+  display: inline-block;
   background-color: #323232;
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
+  margin-bottom: 0.111111em;
+  padding: 0.111111em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #fff;
+}
+
+.text-content h4 {
+  font-size: 48px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.005em;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+
+.text-content h4:before {
+  top: 0.21888em;
+}
+
+.text-content h5 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+
+.text-content h6 {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+
+.text-content h1::before,
+.text-content h2::before,
+.text-content h3::before,
+.text-content h4::before,
+.text-content h5::before,
+.text-content h6::before {
+  background-color: #323232;
 }
 
 .text-content p {
@@ -4464,6 +4507,11 @@ textarea {
 
 .text-content ul {
   margin-bottom: 1.2em;
+  padding-left: 2.66em;
+}
+
+.text-content ul > li {
+  list-style: square;
 }
 
 .text-content ul.square-list {
@@ -4482,6 +4530,16 @@ textarea {
   list-style: none;
   padding-left: 1.3em;
   margin-bottom: 1.2em;
+}
+
+.text-content figure {
+  margin-bottom: 4em;
+}
+
+.text-content figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .text-content a {
@@ -5059,10 +5117,24 @@ textarea {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  position: relative;
 }
 
-.footer__nav-link:hover {
-  color: #59fed1;
+.footer__nav-link:before {
+  position: absolute;
+  content: "";
+  top: 150%;
+  left: 50%;
+  height: 8px;
+  width: 0px;
+  max-width: 100%;
+  background-color: #59fed1;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer .social {
@@ -5676,8 +5748,8 @@ textarea {
   margin-bottom: 1.6em;
 }
 
-.text-block__head [class^=title] {
-  margin-bottom: 0.5em;
+.text-block__head [class*=title] {
+  margin-bottom: 1.16em;
 }
 
 .dec {
@@ -5695,6 +5767,13 @@ textarea {
 .dec img {
   width: 100%;
   height: auto;
+}
+
+.dec.top-rigth {
+  top: 0;
+  -webkit-transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
 }
 
 .info-block {
@@ -6129,15 +6208,25 @@ textarea {
   -webkit-transition: all 1.4s ease;
   -o-transition: all 1.4s ease;
   transition: all 1.4s ease;
-  -o-object-position: 0 50%;
-     object-position: 0 50%;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 .download-card__text-wrap {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 65px 50px 45px 0;
+  padding: 15px 30px 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .download-card__title {
@@ -6346,6 +6435,14 @@ textarea {
     fill: #59fed1;
   }
 
+  .footer__nav-link:hover {
+    color: #59fed1;
+  }
+
+  .footer__nav-link:hover:before {
+    width: 60px;
+  }
+
   .promo__bottom-arrow {
     display: none;
   }
@@ -6360,7 +6457,7 @@ textarea {
   }
 
   .news-list__item.big:hover .news-list__text-wrap {
-    background-color: rgba(69, 69, 69, 0.1);
+    background-color: rgba(69, 69, 69, 0.6);
   }
 
   .news-list__item.big:hover .news-list__title {
@@ -6470,6 +6567,10 @@ textarea {
   .biotope-info__col-2 .biotope-info__text-wrap {
     max-width: 480px;
   }
+
+  .news-detail-page .text-block {
+    margin-top: 150px;
+  }
 }
 
 @media (min-width: 1268px) {
@@ -6480,6 +6581,10 @@ textarea {
   .info-block.info-block-v2 .info-block__text-wrap {
     width: 58%;
     min-height: 807px;
+  }
+
+  .info-block.info-block-v2 .info-block__body.container {
+    max-width: 1360px;
   }
 }
 
@@ -6531,10 +6636,6 @@ textarea {
 
 @media (max-width: 1267.98px) {
   .with-line:before {
-    left: -0.08em;
-  }
-
-  .text-content h3:before {
     left: -0.08em;
   }
 
@@ -6614,6 +6715,10 @@ textarea {
 
   .text-content h1 {
     font-size: 80px;
+  }
+
+  .text-content h4 {
+    font-size: 34px;
   }
 
   .header__body {
@@ -6754,11 +6859,7 @@ textarea {
   }
 
   .download-card__text-wrap {
-    padding: 30px 20px 25px 0;
-  }
-
-  .download-card__text-wrap {
-    padding: 30px 20px;
+    padding: 15px 20px 15px 0;
   }
 
   .more-loading {
@@ -6824,8 +6925,24 @@ textarea {
     font-size: 50px;
   }
 
+  .text-content h2 {
+    font-size: 56px;
+  }
+
   .text-content h3 {
     font-size: 51px;
+  }
+
+  .text-content h4 {
+    font-size: 30px;
+  }
+
+  .text-content h5 {
+    font-size: 28px;
+  }
+
+  .text-content h6 {
+    font-size: 24px;
   }
 
   .header.is-scroll:not(.menu-open) .header__body,
@@ -6988,6 +7105,10 @@ textarea {
     font-size: 6px;
   }
 
+  .download-card__text-wrap {
+    padding: 25px 20px;
+  }
+
   .download-card__text {
     font-size: 18px;
   }
@@ -7020,6 +7141,10 @@ textarea {
 
   .text-content p.big-text {
     font-size: 30px;
+  }
+
+  .text-content ul {
+    padding-left: 1.5em;
   }
 
   .text-content ul.square-list {
@@ -7074,6 +7199,10 @@ textarea {
   }
 
   .text-content h1 {
+    font-size: 40px;
+  }
+
+  .text-content h2 {
     font-size: 40px;
   }
 

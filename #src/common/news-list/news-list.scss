@@ -100,7 +100,7 @@
             @media (min-width: 992px) {
                 &:hover {
                     & .news-list__text-wrap {
-                        background-color: rgba($mainColor, 0.1);
+                        background-color: rgba($mainColor, 0.6);
                     }
                     & .news-list__title {
                         color: $hover;

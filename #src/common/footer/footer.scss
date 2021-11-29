@@ -127,12 +127,30 @@
         letter-spacing: 0.005em;
         line-height: 1.2em;
         transition: all .3s ease;
+        position: relative;
 
+        &:before {
+            position: absolute;
+            content: '';
+            top: 150%;
+            left: 50%;
+            height: 8px;
+            width: 0px;
+            max-width: 100%;
+            background-color: $hover;
+            transform: translateX(-50%);
+            transition: all .3s ease;
+        }
 
+        @media (min-width: 992px) {
             &:hover {
                 color: $hover;
+
+                &:before {
+                    width: 60px;
+                }
             }
-        
+        }
     }
 
     & .social {

@@ -49,8 +49,8 @@
     }
 
     &__head {
-        & [class^="title"] {
-            margin-bottom: 0.5em;
+        & [class*="title"] {
+            margin-bottom: 1.16em;
         }
     }
 }
@@ -77,5 +77,10 @@
     @media (max-width: $md3+px) {
 
         transform: translate(15%, 40%);
+    }
+
+    &.top-rigth {
+        top: 0;
+        transform: translate(0%, 0%);
     }
 }

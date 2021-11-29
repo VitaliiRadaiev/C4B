@@ -13,6 +13,10 @@
                 width: 58%;
                 min-height: 807px;
             }
+
+            & .info-block__body.container {
+                max-width: 1360px;
+            }
         }
     }
 
