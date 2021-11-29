@@ -4417,6 +4417,15 @@ textarea {
   margin-bottom: 0;
 }
 
+.text-content h1 {
+  font-size: 90px;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  line-height: 1em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
 .text-content h3 {
   font-size: 72px;
   font-weight: 700;
@@ -6603,6 +6612,10 @@ textarea {
     padding-bottom: 100px;
   }
 
+  .text-content h1 {
+    font-size: 80px;
+  }
+
   .header__body {
     min-height: 180px;
   }
@@ -6805,6 +6818,10 @@ textarea {
 
   .pb {
     padding-bottom: 50px;
+  }
+
+  .text-content h1 {
+    font-size: 50px;
   }
 
   .text-content h3 {
@@ -7053,6 +7070,10 @@ textarea {
   }
 
   .title-3 {
+    font-size: 40px;
+  }
+
+  .text-content h1 {
     font-size: 40px;
   }
 

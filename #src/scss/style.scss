@@ -396,6 +396,22 @@ button.btn-default {
 	}
 
 	& h1 {
+		font-size: 90px;
+		font-weight: 700;
+		letter-spacing: 0.005em;
+		line-height: 1em;
+		margin-top: 0;
+		margin-bottom: 0.5em;
+		@media (max-width: $md2+px) {
+			font-size: 80px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 50px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 40px;
+		}
+		
 	}
 	& h2 {
 	}
