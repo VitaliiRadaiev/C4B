@@ -24,14 +24,15 @@
         position: absolute;
         top: -50px;
         left: 50%;
-        height: calc(100% + 100px);
+        height: calc(100% + 300px);
         width: calc(100% + 100px);
         transform: translateX(-50%);
         z-index: 1;
         overflow: hidden;
 
         & img {
-            object-position: 0 30%;
+            object-position: 0 33%;
+            transition: all .4s ease;
         }
 
         & .bg-wrap {
@@ -68,11 +69,15 @@
         padding-top: 245px;
 
         @media (max-width: $md2+px) {
-            padding-top: 200px;
+            padding-top: max(160px, 40vh);
+            justify-content: flex-start;
+            align-items: center;
         }
         @media (max-width: $md3+px) {
-            padding-top: 150px;
+
             min-height: 100vh;
+  
+            
         }
     }
 

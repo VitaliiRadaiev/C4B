@@ -47,6 +47,12 @@
             }
         }
     }
+
+    &__head {
+        & [class^="title"] {
+            margin-bottom: 0.5em;
+        }
+    }
 }
 
 .dec {

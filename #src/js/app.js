@@ -30,6 +30,7 @@ window.addEventListener('load', function () {
 	@@include('../common/burger/burger.js');
 	@@include('../common/header/header.js');
 	@@include('../common/news-list/news-list.js');
+	@@include('../common/hero/hero.js');
 	@@include('pages/home.js');
 
 	let wow = new WOW({

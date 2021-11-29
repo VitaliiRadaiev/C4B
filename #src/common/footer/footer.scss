@@ -128,11 +128,11 @@
         line-height: 1.2em;
         transition: all .3s ease;
 
-        @media (min-width: 992px) {
+
             &:hover {
                 color: $hover;
             }
-        }
+        
     }
 
     & .social {
