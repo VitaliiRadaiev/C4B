@@ -33,7 +33,7 @@
 
 // ==== PLAGINS ===========================================================================================
 //@import "plagins/swiper-bundle";
-@import "plagins/animate";
+//@import "plagins/animate";
 // ==== // PLAGINS ===========================================================================================
 
 // ==== FORM STYLE DEFAULT ===========================================================================================
@@ -55,6 +55,11 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+*:focus {
+	opacity: 0.5 !important;
+	transition: none !important;
 }
 :focus,
 :active {
@@ -96,6 +101,12 @@ body {
 
 	&.lock {
 		overflow: hidden;
+	}
+
+	&._is-mobile-ios {
+		& .menu__scroll-wrap {
+			padding-bottom: 130px;
+		}
 	}
 }
 
@@ -147,6 +158,19 @@ textarea {
 	appearance: none;
 }
 
+._anim {
+	&.fadeInUp {
+		opacity: 0;
+		transition: all 1s ease 0.5s;
+		transform: translateY(70%);
+
+		&._active {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	}
+}
+
 .center {
 	text-align: center;
 }
@@ -159,9 +183,9 @@ textarea {
 }
 
 .container {
-	max-width: 1680px;
+	max-width: 1720px;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 0 60px;
 
 	@media (max-width: $md4+px) {
 		padding-left: 20px;
@@ -170,9 +194,9 @@ textarea {
 }
 
 .container-sm {
-	max-width: 1360px;
+	max-width: 1400px;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 0 60px;
 
 	@media (max-width: $md4+px) {
 		padding-left: 20px;
@@ -329,6 +353,19 @@ button.btn-default {
 .link {
 }
 
+.link-to-top {
+	& .default-link__text {
+		transition: all 0.3s ease;
+		background: linear-gradient(0deg, #59fed1 1%, #59fed1 1%, #59fed1 10%, rgba(0, 0, 0, 0) 10%);
+		display: inline-block;
+		@media (min-width: 992px) {
+			&:hover {
+				color: $hover;
+			}
+		}
+	}
+}
+
 .default-link {
 	display: inline-flex;
 	flex-direction: column;
@@ -389,6 +426,24 @@ button.btn-default {
 
 	@media (max-width: 575.98px) {
 		font-size: 22px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 18px;
+
+		&._pedding-right {
+			& h1,
+			& h2,
+			& h3,
+			& h4,
+			& h5,
+			& h6,
+			& ul:not(.blocks-gallery-grid),
+			& ol,
+			& p {
+				padding-right: 30px;
+			}
+		}
 	}
 
 	& > *:last-child {
@@ -509,27 +564,43 @@ button.btn-default {
 		}
 	}
 
-	& h1, & h2, & h3, & h4, & h5, & h6 {
+	& h1,
+	& h2,
+	& h3,
+	& h4,
+	& h5,
+	& h6 {
 		&::before {
 			background-color: $textColor;
+		}
+	}
+
+	& .big-text {
+		font-size: 40px;
+		line-height: 1.5em;
+		letter-spacing: 0.01875em;
+		margin-bottom: 1.6em;
+
+		@media (max-width: 575.98px) {
+			font-size: 30px;
+			line-height: 1.7em;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 24px;
+			line-height: 1.9em;
 		}
 	}
 
 	& p {
 		margin-bottom: 1.2em;
 
-		&.big-text {
-			font-size: 40px;
-			line-height: 1.5em;
-			letter-spacing: 0.01875em;
-
-			@media (max-width: 575.98px) {
-				font-size: 30px;
-			}
-		}
-
-		& ~ h3 {
-			margin-top: 1.6em;
+		& ~ h2,
+		& ~ h3,
+		& ~ h4,
+		& ~ h5,
+		& ~ h6 {
+			margin-top: 1.7em;
 		}
 	}
 
@@ -567,20 +638,49 @@ button.btn-default {
 	}
 
 	& ol {
-		list-style: none;
-		padding-left: 1.3em;
+		list-style: auto;
+		padding-left: 1em;
 		margin-bottom: 1.2em;
+		list-style-position: inside;
 
 		& > li {
 		}
 	}
 
 	& figure {
-		margin-bottom: 4em;
+		margin-bottom: 2em;
+
 		& img {
 			display: block;
 			width: 100%;
 			height: auto;
+		}
+
+		& iframe {
+			width: 100%;
+			height: 700px;
+
+			@media (max-width: $md2+px) {
+				height: 600px;
+			}
+			@media (max-width: $md3+px) {
+				height: 450px;
+			}
+			@media (max-width: $md4+px) {
+				height: 350px;
+			}
+		}
+
+		& figcaption {
+			font-size: 18px;
+			font-weight: 700;
+			font-style: normal;
+			letter-spacing: 0.09px;
+			line-height: 1.4em;
+
+			@media (max-width: $md3+px) {
+				font-size: 16px;
+			}
 		}
 	}
 
@@ -597,6 +697,61 @@ button.btn-default {
 			}
 		}
 	}
+
+	& img,
+	& svg {
+		max-width: 100%;
+	}
+}
+
+blockquote {
+	max-width: 996px;
+	margin: 160px auto;
+	border-top: 1px solid $mainColor;
+	border-bottom: 1px solid $mainColor;
+	padding: 1.041em 1.5625em 1.041em 4.125em;
+	font-size: 48px;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: 0.005em;
+	line-height: 1.5em;
+	position: relative;
+
+	@media (max-width: $md2+px) {
+		margin: 100px auto;
+	}
+	@media (max-width: $md3+px) {
+		margin: 50px auto;
+		font-size: 32px;
+	}
+
+	@media (max-width: $md4+px) {
+		padding: 1.041em 1.5625em 1.041em 1.8em;
+	}
+
+	& p {
+		margin-bottom: 0 !important;
+	}
+
+	&:before {
+		position: absolute;
+		content: "”";
+		position: absolute;
+		left: 0.285em;
+		top: 46%;
+		font-size: 5.83333em;
+		font-family: $mainFontFamily;
+
+		@media (max-width: $md4+px) {
+			left: -0.04em;
+			top: 40%;
+			font-size: 4.83333em;
+		}
+	}
+}
+
+.blocks-gallery-grid {
+	padding-left: 0 !important;
 }
 // === and TEXT CONTETN BLOCK ========================================================================
 
@@ -609,6 +764,7 @@ button.btn-default {
 @import "../common/hero/hero";
 @import "../common/text-block/text-block";
 @import "../common/info-block/info-block";
+@import "../common/with-decor/with-decor";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================

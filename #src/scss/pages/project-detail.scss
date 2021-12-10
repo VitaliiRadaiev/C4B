@@ -1,0 +1,22 @@
+.project-detail-page {
+    & .text-block._first {
+        & .text-content {
+            & p:first-of-type {
+                margin-bottom: 1.6em;
+                font-size: 40px;
+                line-height: 1.5em;
+                letter-spacing: 0.01875em;
+    
+                @media (max-width: 575.98px) {
+                    font-size: 30px;
+                    line-height: 1.7em;
+                }
+
+                @media (max-width: $md4+px) {
+                    line-height: 1.9em;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

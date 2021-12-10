@@ -31,13 +31,15 @@ window.addEventListener('load', function () {
 	@@include('../common/header/header.js');
 	@@include('../common/news-list/news-list.js');
 	@@include('../common/hero/hero.js');
+	@@include('../common/with-decor/with-decor.js');
 	@@include('pages/home.js');
+	@@include('files/scrollAnimation.js');
 
-	let wow = new WOW({
-		boxClass: '_anim',
-		offset: 7,
-	})
-	wow.init();
+	// let wow = new WOW({
+	// 	boxClass: '_anim',
+	// 	offset: 7,
+	// })
+	// wow.init();
 
 
 	let castomLinks = document.querySelectorAll('[data-href]');
@@ -51,11 +53,26 @@ window.addEventListener('load', function () {
 			})
 		})
 	}
+
+	let linkToTop = document.querySelector('.link-to-top');
+	if(linkToTop) {
+		linkToTop.addEventListener('click', (e) => {
+			e.preventDefault();
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+			})
+		})
+	}
 });
 
 window.addEventListener('DOMContentLoaded', function () {
 	if (isMobile.any()) {
 		document.body.classList.add('_is-mobile');
+	}
+
+	if(isMobile.iOS()) {
+		document.body.classList.add('_is-mobile-ios');
 	}
 
 	@@include('files/dynamic_adapt.js');
@@ -97,6 +114,24 @@ window.addEventListener('DOMContentLoaded', function () {
 		hero.classList.add('_parallax');
 		div.setAttribute('data-depth', '0.20');
 		bg.append(div);
+	}
+
+	let textBlock = document.querySelector('.text-block');
+	if(textBlock) {
+		let bigText = textBlock.querySelector('.big-text');
+		if(!bigText) {
+			textBlock.classList.add('_first')
+		}
+	}
+
+	let asideIcons = document.querySelector('#dpsp-floating-sidebar');
+	if(asideIcons) {
+		let textContentAll = document.querySelectorAll('.text-content');
+		if(textContentAll.length) {
+			textContentAll.forEach(item => {
+				item.classList.add('_pedding-right');
+			})
+		}
 	}
 
 });

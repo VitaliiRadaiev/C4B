@@ -1,0 +1,26 @@
+.with-decor {
+    & .svg-deg-wrap {
+        position: absolute;
+        z-index: -1;
+        width: 30%;
+        max-width: 346px;
+        left: 0;
+        transform: translateX(-55%);
+
+        &:nth-child(even) {
+            left: auto;
+            right: 0;
+            transform: translateX(55%);
+        }
+
+        & svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: $md1+px) {
+            display: none;
+        }
+    }
+}

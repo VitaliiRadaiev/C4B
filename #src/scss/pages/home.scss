@@ -163,6 +163,18 @@
             & img {
                 max-height: 130px;
             }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+
+            &:active {
+                box-shadow: none;
+                background-color: transparent;
+                transform: translateY(0px);
+            }
         }
     }
 
@@ -186,7 +198,7 @@
         display: flex;
         flex-wrap: wrap;
         padding-top: 160px;
-        padding-bottom: 160px;
+        padding-bottom: 70px;
         align-items: center;
 
         @media (max-width: $md2+px) {
@@ -222,6 +234,7 @@
         line-height: 1.6em;
         transition: all .4s ease;
         background-color: transparent;
+        margin-bottom: 90px;
 
         @media (max-width: $md2+px) {
             flex: 0 1 33.333%;

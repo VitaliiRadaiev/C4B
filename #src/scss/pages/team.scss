@@ -1,4 +1,10 @@
-
+.team-page {
+    & .partners_v2 {
+        & .partners__body {
+            padding-bottom: 0;
+        }
+    }
+}
 
 .team {
     padding: 160px 0;

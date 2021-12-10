@@ -225,3 +225,8 @@ function trimString(el, stringLength = 0) {
 	if(str.length <= stringLength) return;
 	el.innerText = [...str].slice(0, stringLength).join('') + '...';
 }
+
+function randomInteger(min, max) {
+	let rand = min + Math.random() * (max + 1 - min);
+	return Math.floor(rand);
+}

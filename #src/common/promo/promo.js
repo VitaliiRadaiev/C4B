@@ -2,7 +2,7 @@
     let promoBg = document.querySelector('.promo__bg');
     if(promoBg) {
         const setBgWidth = () => {
-            let width = (promoBg.clientHeight / 100 * 177.77);
+            let width = ((promoBg.clientHeight + 100) / 100 * 177.77);
             if(width > document.documentElement.clientWidth) {
                 promoBg.style.width = width + 'px';
                 promoBg.style.height = 'calc(100% + 100px)';
@@ -13,7 +13,7 @@
         }
 
         setBgWidth();
-        window.addEventListener('resize', setBgWidth);
+       window.addEventListener('resize', setBgWidth);
     }
 
     let promoTitle = document.querySelector('.promo__title');
