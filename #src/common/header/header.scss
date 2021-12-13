@@ -100,6 +100,12 @@
         position: relative;
         padding: 18px 0;
         margin: -15px 0 -15px 47px;
+
+        &:hover {
+            & .header__logout-message {
+                display: block;
+            }
+        }
     }
 
     &__logout-icon {

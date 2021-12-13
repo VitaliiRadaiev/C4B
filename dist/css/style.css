@@ -1251,6 +1251,10 @@ blockquote:before {
   margin: -15px 0 -15px 47px;
 }
 
+.header__logout:hover .header__logout-message {
+  display: block;
+}
+
 .header__logout-icon {
   display: block;
   width: 56px;
