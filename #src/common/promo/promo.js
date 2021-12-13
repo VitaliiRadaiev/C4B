@@ -42,7 +42,7 @@
             delay: 800,
         })
         .add({
-            targets:['.header__burger'],
+            targets:['.header__burger', '.header__logout'],
             opacity: [0, 1],
             translateY: ['-100%', '0%'],
             delay: (el, i) => 200 * i,
