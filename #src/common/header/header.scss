@@ -74,6 +74,7 @@
     &__burger {
         flex: 0 0 auto;
         cursor: pointer;
+        margin-left: auto;
 
         & img {
             width: 100%;
@@ -91,6 +92,76 @@
                 &:hover {
                     opacity: 0.8;
                 }
+            }
+        }
+    }
+
+    &__logout {
+        position: relative;
+        padding: 18px 0;
+        margin: -15px 0 -15px 47px;
+    }
+
+    &__logout-icon {
+        display: block;
+        width: 56px;
+
+        transition: all 0.4s ease;
+
+        @media (min-width: 992px) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__logout-message {
+        position: absolute;
+        width: 310px;
+        max-width: 100vw;
+        top: 100%;
+        background-color: #fff;
+        padding: 40px 30px 40px;
+        right: -58px;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+
+        @media (max-width: $md4+px) {
+            right: -18px;
+        }
+
+        &.text-content {
+            font-size: 20px;
+
+            & p {
+                margin-bottom: 0.7em;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            height: 18px;
+            width: 18px;
+            top: 0;
+            right: 65px;
+            background-color: #fff;
+            transform: translateY(-50%) rotate(45deg);
+
+            @media (max-width: $md4+px) {
+                right: 25px;
             }
         }
     }

@@ -98,7 +98,6 @@ body {
 	flex-direction: column;
 	position: relative;
 	min-height: 100%;
-
 	&.lock {
 		overflow: hidden;
 	}
@@ -765,6 +764,7 @@ blockquote {
 @import "../common/text-block/text-block";
 @import "../common/info-block/info-block";
 @import "../common/with-decor/with-decor";
+@import "../common/form/form";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================

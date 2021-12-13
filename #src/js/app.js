@@ -27,11 +27,13 @@ window.addEventListener('load', function () {
 	// ==== AND ADD PADDING-TOP ================================
 
 	@@include('_function.js');
+	@@include('forms.js');
 	@@include('../common/burger/burger.js');
 	@@include('../common/header/header.js');
 	@@include('../common/news-list/news-list.js');
 	@@include('../common/hero/hero.js');
 	@@include('../common/with-decor/with-decor.js');
+
 	@@include('pages/home.js');
 	@@include('files/scrollAnimation.js');
 
@@ -76,6 +78,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 
 	@@include('files/dynamic_adapt.js');
+	@@include('../common/form/form.js');
 
 	function testWebP(callback) {
 
