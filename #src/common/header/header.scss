@@ -47,6 +47,7 @@
         max-width: 286px;
         transition: all 0.4s ease;
         margin-right: 30px;
+
         & img, & svg {
             width: 100%;
             height: auto;
@@ -62,13 +63,20 @@
             }
         }
 
-        &:not(:hover) {
+        & a:hover {
             & svg {
-                & tspan, & path {
-                    fill: #fff !important;
+                & .bubble-left {
+                    fill: #DF4F91;
+                }
+                & .bubble-right {
+                    fill: #97D0C5;
                 }
             }
         }
+
+        // .st0{clip-path:url(#SVGID_00000051357331209195248070000004492331298008458652_);fill:#97D0C5;}
+        // .st1{clip-path:url(#SVGID_00000051357331209195248070000004492331298008458652_);fill:#DF4F91;}
+        // .st2{fill:#767676;}
     }
 
     &__burger {

@@ -212,12 +212,13 @@ div.wpforms-container-full .wpforms-form .wpforms-page {
                     position: relative;
 
                     & .wpforms-field-description {
-                        position: absolute;
-                        top: 50%;
-                        right: -35px;
-                        font-size: 18px;
-                        transform: translateY(-50%);
-                        margin: 0 !important;
+                        font-size: 1.5rem;
+                        // position: absolute;
+                        // top: 50%;
+                        // right: -35px;
+                        // font-size: 18px;
+                        // transform: translateY(-50%);
+                        // margin: 0 !important;
                     }
                 }
             }
@@ -229,7 +230,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page {
 
                     & .wpforms-field-description {
                         position: absolute;
-                        top: 50%;
+                        top: 15%;
                         right: 0px;
                         font-size: 18px;
                         transform: translateY(-50%);

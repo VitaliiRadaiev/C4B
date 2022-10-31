@@ -171,7 +171,6 @@ textarea {
 		&._active {
 			opacity: 1;
 			transform: translateY(0%);
-			
 		}
 	}
 }
@@ -391,7 +390,7 @@ button.btn-default {
 	@media (min-width: 992px) {
 		&:hover {
 			background-color: $hover;
-			
+
 			& .default-link__icon {
 				transform: translateX(7px);
 			}
@@ -663,7 +662,7 @@ button.btn-default {
 
 		& img {
 			display: block;
-			width: 100%;
+			// width: 100%;
 			height: auto;
 		}
 
@@ -713,6 +712,46 @@ button.btn-default {
 	& svg {
 		max-width: 100%;
 	}
+}
+
+.page-id-1124 .text-content a {
+	text-decoration: none;
+	font-weight: 700;
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(1%, #df4f91),
+		color-stop(1%, #df4f91),
+		color-stop(10%, #df4f91),
+		color-stop(10%, rgba(0, 0, 0, 0))
+	);
+	background: -o-linear-gradient(bottom, #df4f91 1%, #df4f91 1%, #df4f91 10%, rgba(0, 0, 0, 0) 10%);
+	background: linear-gradient(0deg, #df4f91 1%, #df4f91 1%, #df4f91 10%, rgba(0, 0, 0, 0) 10%);
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	color: inherit;
+}
+
+.page-id-1124 .text-content a:hover {
+	text-decoration: none;
+	font-weight: 700;
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(1%, #df4f91),
+		color-stop(1%, #df4f91),
+		color-stop(10%, #df4f91),
+		color-stop(10%, rgba(0, 0, 0, 0))
+	);
+	background: -o-linear-gradient(bottom, #df4f91 1%, #df4f91 1%, #df4f91 10%, rgba(0, 0, 0, 0) 10%);
+	background: linear-gradient(0deg, #df4f91 1%, #df4f91 1%, #df4f91 10%, rgba(0, 0, 0, 0) 10%);
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	color: #df4f91;
 }
 
 blockquote {
