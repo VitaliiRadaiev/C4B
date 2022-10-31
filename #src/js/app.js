@@ -77,8 +77,9 @@ window.addEventListener('DOMContentLoaded', function () {
 		document.body.classList.add('_is-mobile-ios');
 	}
 
-	@@include('files/dynamic_adapt.js');
-	@@include('../common/form/form.js');
+	@@include('files/dynamic_adapt.js')
+	@@include('../common/form/form.js')
+	@@include('../common/popup/popup.js')
 
 	function testWebP(callback) {
 

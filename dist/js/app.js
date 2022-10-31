@@ -552,221 +552,12 @@ function selects_update_all() {
 }
 
 //Placeholers
-let inputs = document.querySelectorAll('input');
-inputs_init(inputs);
 
-function inputs_init(inputs) {
-	if (inputs.length > 0) {
-		for (let index = 0; index < inputs.length; index++) {
-			const input = inputs[index];
 
-			if (input.classList.contains('_mask')) {
-				//'+7(999) 999 9999'
-				//'+38(999) 999 9999'
-				//'+375(99)999-99-99'
-				let maskValue = input.dataset.mask;
-				input.classList.add('_mask');
-				Inputmask('+1(999) 999 9999', {
-					//"placeholder": '',
-					clearIncomplete: true,
-					clearMaskOnLostFocus: true,
-					onincomplete: function () {
-						//input_clear_mask(input, input_g_value);
-					}
-				}).mask(input);
-			}
-			if (input.classList.contains('_date')) {
-				datepicker(input, {
-					formatter: (input, date, instance) => {
-						const value = date.toLocaleDateString()
-						input.value = value
-					},
-					onSelect: function (input, instance, date) {
-						input_focus_add(input.el);
-					}
-				});
-			}
 
-			//const input_g_value = input.getAttribute('data-value');
-			//input_placeholder_add(input);
-			// if (input.value != '' && input.value != input_g_value) {
-			// 	input_focus_add(input);
-			// }
-			// input.addEventListener('focus', function (e) {
-			// 	if (input.value == input_g_value) {
-			// 		input_focus_add(input);
-			// 		input.value = '';
-			// 	}
-			// 	if (input.getAttribute('data-type') === "pass") {
-			// 		input.setAttribute('type', 'password');
-			// 	}
-			// 	if (input.classList.contains('_date')) {
-			// 		/*
-			// 		input.classList.add('_mask');
-			// 		Inputmask("99.99.9999", {
-			// 			//"placeholder": '',
-			// 			clearIncomplete: true,
-			// 			clearMaskOnLostFocus: true,
-			// 			onincomplete: function () {
-			// 				input_clear_mask(input, input_g_value);
-			// 			}
-			// 		}).mask(input);
-			// 		*/
-			// 	}
-			// 	if (input.classList.contains('_phone')) {
-			// 		//'+7(999) 999 9999'
-			// 		//'+38(999) 999 9999'
-			// 		//'+375(99)999-99-99'
-			// 		input.classList.add('_mask');
-			// 		Inputmask("+375 (99) 9999999", {
-			// 			//"placeholder": '',
-			// 			clearIncomplete: true,
-			// 			clearMaskOnLostFocus: true,
-			// 			onincomplete: function () {
-			// 				input_clear_mask(input, input_g_value);
-			// 			}
-			// 		}).mask(input);
-			// 	}
-			// 	if (input.classList.contains('_digital')) {
-			// 		input.classList.add('_mask');
-			// 		Inputmask("9{1,}", {
-			// 			"placeholder": '',
-			// 			clearIncomplete: true,
-			// 			clearMaskOnLostFocus: true,
-			// 			onincomplete: function () {
-			// 				input_clear_mask(input, input_g_value);
-			// 			}
-			// 		}).mask(input);
-			// 	}
-			// 	form_remove_error(input);
-			// });
-			// input.addEventListener('blur', function (e) {
-			// 	if (input.value == '') {
-			// 		input.value = input_g_value;
-			// 		input_focus_remove(input);
-			// 		if (input.classList.contains('_mask')) {
-			// 			input_clear_mask(input, input_g_value);
-			// 		}
-			// 		if (input.getAttribute('data-type') === "pass") {
-			// 			input.setAttribute('type', 'text');
-			// 		}
-			// 	}
-			// });
-			// if (input.classList.contains('_date')) {
-			// 	datepicker(input, {
-			// 		customDays: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-			// 		customMonths: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
-			// 		formatter: (input, date, instance) => {
-			// 			const value = date.toLocaleDateString()
-			// 			input.value = value
-			// 		},
-			// 		onSelect: function (input, instance, date) {
-			// 			input_focus_add(input.el);
-			// 		}
-			// 	});
-			// }
-		}
-	}
-}
-// function input_placeholder_add(input) {
-// 	const input_g_value = input.getAttribute('data-value');
-// 	if (input.value == '' && input_g_value != '') {
-// 		input.value = input_g_value;
-// 	}
-// }
-// function input_focus_add(input) {
-// 	input.classList.add('_focus');
-// 	input.parentElement.classList.add('_focus');
-// }
-// function input_focus_remove(input) {
-// 	input.classList.remove('_focus');
-// 	input.parentElement.classList.remove('_focus');
-// }
-// function input_clear_mask(input, input_g_value) {
-// 	input.inputmask.remove();
-// 	input.value = input_g_value;
-// 	input_focus_remove(input);
-// }
-
-// ==  QUANTITY =====================================================
-let quantityButtons = document.querySelectorAll('.quantity__button');
-if (quantityButtons.length > 0) {
-	for (let index = 0; index < quantityButtons.length; index++) {
-		const quantityButton = quantityButtons[index];
-		quantityButton.addEventListener("click", function (e) {
-			let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
-			if (quantityButton.classList.contains('quantity__button_plus')) {
-				value++;
-			} else {
-				value = value - 1;
-				if (value < 1) {
-					value = 1
-				}
-			}
-			quantityButton.closest('.quantity').querySelector('input').value = value;
-		});
-	}
-}
-// == // QUANTITY =====================================================
-
-// == PRICE SLIDER =====================================================
-let priceSlider = document.querySelector('.price-filter');
-
-if(priceSlider) {
-	let inputNumFrom = document.getElementById('priceStart');
-	let inputNumTo = document.getElementById('priceEnd');
-	let value = document.querySelector('.values-price-filter');
-
-	let min = value.dataset.min;
-	let max = value.dataset.max;
-	let numStart = value.dataset.start;
-	let numEnd = value.dataset.end;
-	noUiSlider.create(priceSlider, {
-		start: [+numStart, +numEnd],  
-		connect: true,
-		tooltips:[wNumb({decimals: 0, thousand: ','}) , wNumb({decimals: 0, thousand: ','})], 
-		range: {
-			'min': [+min],
-			'1%': [100,100],
-			'max': [+max],
-		}
-	});
-
-	priceSlider.noUiSlider.on('update', function (values, handle) {
-
-	    var value = values[handle];
-
-	    if (handle) {
-	        inputNumTo.value = Math.round(value);
-	    } else {
-	        inputNumFrom.value = Math.round(value);
-	    }
-	});
-
-	inputNumTo.onchange = function() {
-		setPriceValues()
-	}
-
-	inputNumFrom.onchange = function() {
-		setPriceValues()
-	}
-
-	function setPriceValues() {
-		let priceStartValue;
-		let priceEndValue;
-		if(inputNumFrom.value != '') {
-			priceStartValue = inputNumFrom.value;
-		}
-
-		if(inputNumTo.value != '') {
-			priceEndValue = inputNumTo.value;
-		}
-
-		  priceSlider.noUiSlider.set([priceStartValue, priceEndValue])
-	}
-}
-
-// == // PRICE SLIDER =====================================================;
+window.showValue = (id) => {
+	let input = document.getElementById(id);
+};
 	function burgerHandler() {
     let burger = document.querySelector('.burger');
     if(burger) {
@@ -25165,6 +24956,10 @@ if (animItems.length > 0) {
 
 			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
 				animItem.classList.add('_active');
+				setTimeout(() => {
+					animItem.style.transitionDelay = '0s';
+					animItem.style.transitionDuration = '0.3s';
+				}, 500)
 			} else {
 				if (!animItem.classList.contains('_anim-no-hide')) {
 					//	animItem.classList.remove('_active');
@@ -25360,7 +25155,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	function customAdapt() {
 		//const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	}
-}());;
+}());
 	let formLogin = document.querySelector('#wpforms-form-518');
 if(formLogin) {
     let fieldsetBox = document.createElement('fieldset');
@@ -25373,8 +25168,539 @@ if(formLogin) {
     fieldsetBox.append(...formLogin.children);
     formLogin.append(fieldsetBox);
     fieldsetBox.append(forgotPasswordLink);
+}
 
-};
+
+let quizForm = document.querySelector('#wpforms-form-525');
+if(quizForm) {
+    let formPage1 = quizForm.querySelector('.wpforms-page.wpforms-page-1');
+    let formPage2 = quizForm.querySelector('.wpforms-page.wpforms-page-2');
+    let formPage3 = quizForm.querySelector('.wpforms-page.wpforms-page-3 .wpforms-entry-preview-wrapper');
+
+    if(formPage1) createGroupsByTitles(formPage1);
+    if(formPage2) createGroupsByTitles(formPage2);
+
+    let observer = new MutationObserver(mutationRecords => {
+        let preview = formPage3.querySelector('.wpforms-entry-preview');
+        if(!preview) return;
+
+        let count = 0;
+        let elements = [];
+    
+        let titles = preview.querySelectorAll('.wpforms-entry-preview-label');
+        if(titles.length) {
+            for(let i = 0; i < titles.length; i++) {
+                elements.push([]);
+            }
+        }
+    
+    
+        preview.children.forEach(item => {
+            if(item.classList.contains('wpforms-entry-preview-label')) {
+                item.style.display = 'none';
+                count++;
+                if(!!count) {
+                    elements[count-1].push(item);
+                }
+            } else {
+                if(!!count) {
+                    elements[count-1].push(item);
+                }
+            }
+        })
+        elements.forEach((group, index) => {
+            let fieldsetBox = document.createElement('fieldset');
+            let legend = document.createElement('legend');
+            legend.innerText = titles[index].innerText;
+    
+            fieldsetBox.append(legend);
+            group[0].before(fieldsetBox);
+            fieldsetBox.append(...group);
+        })
+      });
+      
+      observer.observe(formPage3, {
+        childList: true,
+      });
+}
+
+
+function createGroupsByTitles(parent) {
+    if(!parent) return;
+
+    let count = 0;
+    let elements = [];
+
+    let titles = parent.querySelectorAll('.wpforms-field .form-header-h4');
+    if(titles.length) {
+        for(let i = 0; i < titles.length; i++) {
+            elements.push([]);
+        }
+    }
+
+
+    parent.children.forEach(item => {
+        if(item.classList.contains('wpforms-field-pagebreak')) return;
+
+        let title = item.querySelector('.form-header-h4');
+        if(title) {
+            item.style.display = 'none';
+            count++;
+            if(!!count) {
+                elements[count-1].push(item);
+            }
+        } else {
+            if(!!count) {
+                elements[count-1].push(item);
+            }
+        }
+    })
+
+    elements.forEach((group, index) => {
+        let fieldsetBox = document.createElement('fieldset');
+        let legend = document.createElement('legend');
+        legend.innerText = titles[index].innerText;
+
+        fieldsetBox.append(legend);
+        group[0].before(fieldsetBox);
+        fieldsetBox.append(...group);
+    })
+}
+
+
+
+
+let nicknameWrap = document.querySelector('.nickname-class');
+let emailWrap = document.querySelector('.email-class');
+if(nicknameWrap && emailWrap) {
+    nicknameWrap.style.display = 'none';
+
+    let nicknameInput = nicknameWrap.querySelector('input');
+    let emailInput = emailWrap.querySelector('input');
+
+    emailInput.addEventListener('input', (e) => {
+        nicknameInput.value = e.target.value;
+    })
+}
+
+
+function showHideGroupFieldGyCheckbox(checkbox, elements) {
+    if(checkbox.checked) {
+        elements.forEach(el => {
+            el.style.display = 'none';
+        })
+    } else {
+        elements.forEach(el => {
+            el.style.display = 'block';
+        })
+    }
+
+    checkbox.addEventListener('change', (e) => {
+        if(e.target.checked) {
+            elements.forEach(el => {
+                el.style.display = 'none';
+            })
+        } else {
+            elements.forEach(el => {
+                el.style.display = 'block';
+            })
+        }
+    })
+}
+
+let checkbox1 = document.querySelector('.checkbox-group-1 input[type="checkbox"]');
+let groupField1 = document.querySelectorAll('.group-field-1');
+if(checkbox1 && groupField1.length) {
+    showHideGroupFieldGyCheckbox(checkbox1, groupField1);
+}
+let checkbox2 = document.querySelector('.checkbox-group-2 input[type="checkbox"]');
+let groupField2 = document.querySelectorAll('.group-field-2');
+if(checkbox2 && groupField2.length) {
+    showHideGroupFieldGyCheckbox(checkbox2, groupField2);
+}
+
+
+
+let btnSubmit = document.querySelector('#wpforms-submit-525');
+if(btnSubmit) {
+    let hero = document.querySelector('.hero');
+    btnSubmit.addEventListener('click', () => {
+        window.scrollTo({
+            top: hero ? hero.clientHeight : 0,
+            behavior: 'smooth',
+        })
+    })
+}
+
+
+let page3Previews = document.querySelector('#wpforms-525-field_5-container');
+let submitContainer = document.querySelector('.wpforms-submit-container');
+if(submitContainer && page3Previews) {
+    page3Previews.before(submitContainer);
+}
+
+
+let pagination = document.querySelector('.wpforms-form .wpforms-page-indicator');
+let formPage1ButtonContainer = document.querySelector('#wpforms-525-field_3-container .wpforms-pagebreak-left');
+let formPage2ButtonContainer = document.querySelector('#wpforms-525-field_6-container .wpforms-pagebreak-left');
+let formPage3ButtonContainer = document.querySelector('#wpforms-525-field_5-container .wpforms-pagebreak-left');
+if(pagination) {
+    let clonePagination1 = pagination.cloneNode(true);
+    let clonePagination2 = pagination.cloneNode(true);
+    let clonePagination3 = pagination.cloneNode(true);
+
+    if(formPage1ButtonContainer) {
+        formPage1ButtonContainer.prepend(clonePagination1);
+    }
+    if(formPage2ButtonContainer) {
+        formPage2ButtonContainer.prepend(clonePagination2);
+    }
+    if(formPage3ButtonContainer) {
+        formPage3ButtonContainer.prepend(clonePagination3);
+    }
+}
+
+
+
+
+// add mask ===========
+let inputs = document.querySelectorAll('#wpforms-form-525 input[type="tel"]');
+inputs_init(inputs);
+
+function inputs_init(inputs) {
+	if (inputs.length > 0) {
+		for (let index = 0; index < inputs.length; index++) {
+			const input = inputs[index];
+			if (input) {
+				//'+7(999) 999 9999'
+				//'+38(999) 999 9999'
+				//'+375(99)999-99-99'
+				input.classList.add('_mask');
+				Inputmask('+9{*}', {
+					//"placeholder": '',
+					clearIncomplete: true,
+					clearMaskOnLostFocus: true,
+					onincomplete: function () {
+						//input_clear_mask(input, input_g_value);
+					}
+				}).mask(input);
+			}
+		}
+	}
+}
+
+
+let coordinateInputs = document.querySelectorAll('.coordinate-input input');
+if(coordinateInputs.length) {
+    coordinateInputs.forEach(input => {
+        Inputmask('9{*}[.]9{*}', {
+            clearIncomplete: true,
+            clearMaskOnLostFocus: true,
+        }).mask(input);
+    })
+}
+
+let sizeInput = document.querySelector('.size-mask input');
+if(sizeInput) {
+    sizeInput.setAttribute('type', 'text');
+    Inputmask('9.99', {
+        clearIncomplete: true,
+        clearMaskOnLostFocus: true,
+    }).mask(sizeInput);
+}
+
+let grundstucksummerInput = document.querySelector('.grundstucksummer-mask input');
+if(grundstucksummerInput) {
+    Inputmask({ regex: String.raw `[0-9!#$%&'*+/=?^_{|}~\\-]*` }, {
+        clearIncomplete: true,
+        clearMaskOnLostFocus: true,
+    }).mask(grundstucksummerInput);
+}
+
+
+let strasseInput = document.querySelector('.strasse-mask input');
+if(strasseInput) {
+    Inputmask('a{*}', {
+        clearIncomplete: true,
+        clearMaskOnLostFocus: true,
+    }).mask(strasseInput);
+}
+
+let ortInput = document.querySelector('.ort-mask input');
+if(ortInput) {
+    Inputmask({ regex: String.raw `[.A-Za-z\s'/_|\\-]*` }, {
+        clearIncomplete: true,
+        clearMaskOnLostFocus: true,
+    }).mask(ortInput);
+}
+
+
+
+
+// form page 3 checkbox handlers ==============
+let agreementCheckbox = document.querySelector('#wpforms-525-field_74_1');
+let buttonSubmit = document.querySelector('#wpforms-submit-525');
+if(agreementCheckbox && buttonSubmit) {
+    if(!agreementCheckbox.checked) {
+        buttonSubmit.setAttribute('disabled', '');
+    }
+
+    agreementCheckbox.addEventListener('change', (e) => {
+        if(e.target.checked) {
+            buttonSubmit.removeAttribute('disabled');
+        } else {
+            buttonSubmit.setAttribute('disabled', '');
+        }
+    })
+}
+
+
+// form,  add clicable to circle pagination ==============
+let formPages = document.querySelectorAll('#wpforms-form-525 .wpforms-page');
+if(formPages.length) {
+    let allCirclePagination = document.querySelectorAll('#wpforms-form-525 .wpforms-page-indicator.circles');
+    if(allCirclePagination.length) {
+        allCirclePagination.forEach(pagin => {
+            Array.from(pagin.children).forEach(circle => {
+                circle.addEventListener('click', () => {
+                    if(circle.classList.contains('wpforms-page-indicator-page-1')) {
+                        allCirclePagination.forEach(p => {
+                            Array.from(p.children).forEach(c => {
+                                if(c.classList.contains('wpforms-page-indicator-page-1')) {
+                                    c.classList.add('active');
+                                } else {
+                                    c.classList.remove('active');
+                                }
+                            })
+                        })
+
+                        formPages.forEach(page => {
+                            if(page.classList.contains('wpforms-page-1')) {
+                                page.style.display = 'block';
+                            } else {
+                                page.style.display = 'none';
+                            }
+                        })
+                    } else if(circle.classList.contains('wpforms-page-indicator-page-2')) {
+                        allCirclePagination.forEach(p => {
+                            Array.from(p.children).forEach(c => {
+                                if(c.classList.contains('wpforms-page-indicator-page-2')) {
+                                    c.classList.add('active');
+                                } else {
+                                    c.classList.remove('active');
+                                }
+                            })
+                        })
+                        formPages.forEach(page => {
+                            if(page.classList.contains('wpforms-page-2')) {
+                                page.style.display = 'block';
+                            } else {
+                                page.style.display = 'none';
+                            }
+                        })
+                    } else if(circle.classList.contains('wpforms-page-indicator-page-3')) {
+                        allCirclePagination.forEach(p => {
+                            Array.from(p.children).forEach(c => {
+                                if(c.classList.contains('wpforms-page-indicator-page-3')) {
+                                    c.classList.add('active');
+                                } else {
+                                    c.classList.remove('active');
+                                }
+                            })
+                        })
+                        formPages.forEach(page => {
+                            if(page.classList.contains('wpforms-page-3')) {
+                                page.style.display = 'block';
+                            } else {
+                                page.style.display = 'none';
+                            }
+                        })
+                    }
+                })
+            })
+        })
+    }
+}
+
+
+
+// smooth scroll
+let headeLogoutIcon = document.querySelector('.header__logout-icon');
+if(headeLogoutIcon) {
+    headeLogoutIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    })
+}
+	// ==== Popup form handler====
+
+const popupLinks = document.querySelectorAll('[data-popup="open-popup"]');
+const body = document.querySelector('body');
+const lockPadding = document.querySelectorAll('[data-popup="lock-padding"]');
+
+let unlock = true;
+
+const timeout = 800;
+
+if(popupLinks.length > 0) {
+	for (let index = 0; index < popupLinks.length; index++) {
+		const popupLink = popupLinks[index];
+		popupLink.addEventListener('click', function(e) {
+			const popupName = popupLink.getAttribute('href').replace('#', '');
+			const curentPopup = document.getElementById(popupName);
+			popupOpen(curentPopup);
+			e.preventDefault();
+		});
+	}
+}
+
+
+const popupCloseIcon = document.querySelectorAll('[data-popup="close-popup"]');
+if(popupCloseIcon.length > 0) {
+	for(let index = 0; index < popupCloseIcon.length; index++) {
+		const el = popupCloseIcon[index];
+		el.addEventListener('click', function(e) {
+			popupClose(el.closest('.popup'));
+			e.preventDefault();
+		});
+	}
+}
+
+function popupOpen(curentPopup) {
+	if(curentPopup && unlock) {
+		const popupActive = document.querySelector('.popup.popup--open');
+		if (popupActive) {
+			popupClose(popupActive, false);
+		} else {
+			bodyLock();
+		}
+		curentPopup.classList.add('popup--open');
+		curentPopup.addEventListener('click', function(e) {
+			if(!e.target.closest('.popup__content')) {
+				popupClose(e.target.closest('.popup')); 
+			}
+		});
+
+	}
+}
+
+function popupClose(popupActive, doUnlock = true) {
+	if(unlock) {
+		popupActive.classList.remove('popup--open');
+		if(doUnlock) {
+			bodyUnlock();
+		}
+	}
+}
+
+function bodyLock() {
+	const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
+	let targetPadding = document.querySelectorAll('[data-popup="add-right-padding"]');
+	if(targetPadding.length) {
+		for (let index = 0; index < targetPadding.length; index++) {
+			const el = targetPadding[index];
+			el.style.paddingRight = lockPaddingValue;
+		}
+	}
+
+	if(lockPadding.length > 0) {
+		for (let index = 0; index < lockPadding.length; index++) {
+			const el = lockPadding[index];
+			el.style.paddingRight = lockPaddingValue;
+		}
+	}
+
+	body.style.paddingRight = lockPaddingValue;
+	body.classList.add('overflow-hidden');
+
+	unlock = false;
+	setTimeout(function() {
+		unlock = true;
+	}, timeout);
+}
+
+function bodyUnlock() {
+	let targetPadding = document.querySelectorAll('[data-popup="add-right-padding"]');
+
+	setTimeout(function() {
+		if(targetPadding.length) {
+			for (let index = 0; index < targetPadding.length; index++) {
+				const el = targetPadding[index];
+				el.style.paddingRight = '0px';
+			}
+		}
+
+		for( let index = 0; index < lockPadding.length; index++) {
+			const el = lockPadding[index];
+			el.style.paddingRight = '0px';
+		}
+
+		body.style.paddingRight = '0px';
+		body.classList.remove('overflow-hidden');
+	}, timeout);
+
+	unlock = false;
+	setTimeout(function() { 
+		unlock = true;
+	}, timeout);
+}
+
+document.addEventListener('keydown', function(e) {
+	if(e.which === 27) {
+		const popupActive = document.querySelector('.popup.popup--open');
+		popupClose(popupActive);
+	}
+});
+
+// === Polyfill ===
+	(function() {
+		if(!Element.prototype.closest) {
+			Element.prototype.closest = function(css) {
+				var node = this;
+				while(node) {
+					if(node.matches(css)) return node;
+					else node == node.parentElement;
+				}
+				return null;
+			};
+		}
+	})();
+
+	(function() {
+		if(!Element.prototype.matches) {
+			Element.prototype.matches = Element.prototype.matchesSelector ||
+				Element.prototype.webkitMatchesSelector ||
+				Element.prototype.mozMatchesSelector ||
+				Element.prototype.mozMatchesSelector;
+		}
+	})();
+// === AND Polyfill ===
+
+// добавление API попапа в глобалную видимость
+window.popup = {
+	open(id) {
+		if (!id) return;
+
+		let popup = document.querySelector(id);
+
+		if (!popup) return;
+
+		popupOpen(popup);
+	},
+	close(id) {
+		if (!id) return;
+
+		let popup = document.querySelector(id);
+
+		if (!popup) return;
+
+		popupClose(popup);
+	}
+}
+
 
 	function testWebP(callback) {
 

@@ -41,7 +41,7 @@
 // ==== FORM STYLE DEFAULT ===========================================================================================
 
 // ==== POPUP ===========================================================================================
-//@import "common/popup/popup";
+@import "../common/popup/popup";
 // ==== // POPUP ===========================================================================================
 
 * {
@@ -157,6 +157,11 @@ textarea {
 	appearance: none;
 }
 
+[disabled] {
+	pointer-events: none !important;
+	opacity: 0.5;
+}
+
 ._anim {
 	&.fadeInUp {
 		opacity: 0;
@@ -166,6 +171,7 @@ textarea {
 		&._active {
 			opacity: 1;
 			transform: translateY(0%);
+			
 		}
 	}
 }
@@ -203,6 +209,12 @@ textarea {
 	}
 }
 
+.hide-block {
+	display: none !important;
+}
+.blocked-input {
+	pointer-events: none !important;
+}
 .ibg {
 	position: relative;
 	img {
@@ -379,7 +391,7 @@ button.btn-default {
 	@media (min-width: 992px) {
 		&:hover {
 			background-color: $hover;
-
+			
 			& .default-link__icon {
 				transform: translateX(7px);
 			}

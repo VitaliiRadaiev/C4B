@@ -1,8 +1,8 @@
 // ==== Popup form handler====
 
-const popupLinks = document.querySelectorAll('.popup-link');
+const popupLinks = document.querySelectorAll('[data-popup="open-popup"]');
 const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
+const lockPadding = document.querySelectorAll('[data-popup="lock-padding"]');
 
 let unlock = true;
 
@@ -21,7 +21,7 @@ if(popupLinks.length > 0) {
 }
 
 
-const popupCloseIcon = document.querySelectorAll('.close-popup');
+const popupCloseIcon = document.querySelectorAll('[data-popup="close-popup"]');
 if(popupCloseIcon.length > 0) {
 	for(let index = 0; index < popupCloseIcon.length; index++) {
 		const el = popupCloseIcon[index];
@@ -34,16 +34,16 @@ if(popupCloseIcon.length > 0) {
 
 function popupOpen(curentPopup) {
 	if(curentPopup && unlock) {
-		const popupActive = document.querySelector('.popup.open');
+		const popupActive = document.querySelector('.popup.popup--open');
 		if (popupActive) {
 			popupClose(popupActive, false);
 		} else {
 			bodyLock();
 		}
-		curentPopup.classList.add('open');
+		curentPopup.classList.add('popup--open');
 		curentPopup.addEventListener('click', function(e) {
-			if(!e.target.closest('.popup_content')) {
-				popupClose(e.target.closest('.popup'));
+			if(!e.target.closest('.popup__content')) {
+				popupClose(e.target.closest('.popup')); 
 			}
 		});
 
@@ -52,7 +52,7 @@ function popupOpen(curentPopup) {
 
 function popupClose(popupActive, doUnlock = true) {
 	if(unlock) {
-		popupActive.classList.remove('open');
+		popupActive.classList.remove('popup--open');
 		if(doUnlock) {
 			bodyUnlock();
 		}
@@ -61,7 +61,7 @@ function popupClose(popupActive, doUnlock = true) {
 
 function bodyLock() {
 	const lockPaddingValue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
-	let targetPadding = document.querySelectorAll('._lp');
+	let targetPadding = document.querySelectorAll('[data-popup="add-right-padding"]');
 	if(targetPadding.length) {
 		for (let index = 0; index < targetPadding.length; index++) {
 			const el = targetPadding[index];
@@ -77,7 +77,7 @@ function bodyLock() {
 	}
 
 	body.style.paddingRight = lockPaddingValue;
-	body.classList.add('lock');
+	body.classList.add('overflow-hidden');
 
 	unlock = false;
 	setTimeout(function() {
@@ -86,7 +86,7 @@ function bodyLock() {
 }
 
 function bodyUnlock() {
-	let targetPadding = document.querySelectorAll('._lp');
+	let targetPadding = document.querySelectorAll('[data-popup="add-right-padding"]');
 
 	setTimeout(function() {
 		if(targetPadding.length) {
@@ -102,7 +102,7 @@ function bodyUnlock() {
 		}
 
 		body.style.paddingRight = '0px';
-		body.classList.remove('lock');
+		body.classList.remove('overflow-hidden');
 	}, timeout);
 
 	unlock = false;
@@ -113,7 +113,7 @@ function bodyUnlock() {
 
 document.addEventListener('keydown', function(e) {
 	if(e.which === 27) {
-		const popupActive = document.querySelector('.popup.open');
+		const popupActive = document.querySelector('.popup.popup--open');
 		popupClose(popupActive);
 	}
 });
@@ -141,3 +141,25 @@ document.addEventListener('keydown', function(e) {
 		}
 	})();
 // === AND Polyfill ===
+
+// добавление API попапа в глобалную видимость
+window.popup = {
+	open(id) {
+		if (!id) return;
+
+		let popup = document.querySelector(id);
+
+		if (!popup) return;
+
+		popupOpen(popup);
+	},
+	close(id) {
+		if (!id) return;
+
+		let popup = document.querySelector(id);
+
+		if (!popup) return;
+
+		popupClose(popup);
+	}
+}
