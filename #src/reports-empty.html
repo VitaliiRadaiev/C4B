@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{
+    "dark": "dark"
+    })
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page reports-page">
+        <section class="hero">
+            <div class="dec">
+                <img src="img/photo/wabe1.svg" alt="">
+            </div>
+            <div class="hero__bg ibg">
+                <img src="img/photo/hero-bg.jpg" alt="">
+            </div>
+            <div class="hero__body container-sm">
+                <h1 class="hero__title title-1">Flächenmeldungen</h1>
+            </div>
+        </section>
+
+        <div class="p-160 d-none lg-d-block"></div>
+
+        <section class="info-block info-block-v3">
+            <div class="info-block__body container">
+                <div class="info-block__text-wrap left">
+                    <h3 class="info-block__title title-3 with-line">
+                        Die Liste Ihrer <br>
+                        Flächenmeldungen
+                    </h3>
+                    <div class="text-content">
+                        <p>
+                            In der Liste unten können Sie Ihre bisherigen
+                            Flächenmeldungen …
+                        </p>
+                        <ol>
+                            <li>
+                                bearbeiten
+                            </li>
+                            <li>
+                                in der Übersicht ansehen
+                            </li>
+                            <li>
+                                mit Berichten ergänzen
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="info-block__text-wrap right">
+                    <h3 class="info-block__title title-3 with-line">
+                        Neue <br>
+                        Flächenmeldung
+                    </h3>
+    
+                    <div class="info-block__btn-wrap">
+                        <a href="#" class="info-block__btn btn-default">
+                            <div class="btn-default__icon">
+                                <img src="img/icons/trees.svg" alt="">
+                            </div>
+                            <div class="btn-default__text">
+                                Neue <br>
+                                Flächenmeldung <br>
+                                erstellen <img class="btn-default__arrow" src="img/icons/link-arrow.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="p-160"></div>
+        <section class="reports">
+            <div class="container">
+                <div class="reports__table">
+                        <div class="reports__th">Flächenmeldung</div>
+                        <div class="reports__th">erstellt am</div>
+                        <div class="reports__th">Status</div>
+                        <div class="reports__th"></div>
+                </div>
+                <div class="reports__text">
+                    Sie haben noch keine Flächenmedlungen erstellt! 
+                </div>
+            </div>
+        </section>
+        <div class="p-160"></div>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

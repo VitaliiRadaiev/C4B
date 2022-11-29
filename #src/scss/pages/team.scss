@@ -42,7 +42,7 @@
                 flex: 0 1 50%;
             }
 
-            @media (max-width: $md4+px) {
+            @media (max-width: 575.98px) {
                 flex: 0 1 100%;
             }
         }
@@ -66,6 +66,11 @@
         font-size: 2.8em;
         line-height: 1.2em;
         margin-bottom: 1.1em;
+        word-break: break-word;
+
+        @media (max-width: 1500px) {
+            font-size: 2.4em;
+        }
     }
 
     &__email {
@@ -75,6 +80,11 @@
 		background: linear-gradient(0deg, #59fed1 1%, #59fed1 1%, #59fed1 10%, rgba(0, 0, 0, 0) 10%);
 		transition: all 0.3s ease;
 		color: inherit;
+        word-break: break-word;
+
+        @media (max-width: 1500px) {
+            font-size: 2.2em;
+        }
 
 		@media (min-width: 992px) {
 			&:hover {

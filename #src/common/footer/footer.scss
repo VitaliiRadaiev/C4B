@@ -35,6 +35,7 @@
     }
 
     &__banners {
+        flex: 0 0 auto;
         background-color: #fff;
         box-shadow: 0 0 15px rgba($textColor, 0.3);
         display: flex;

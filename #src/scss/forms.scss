@@ -34,6 +34,17 @@
 .select {
 	position: relative !important;
 	// .select__item
+
+	& select {
+		position: absolute !important;
+		z-index: -1;
+		visibility: hidden !important;
+		opacity: 0;
+
+		&.wpforms-error ~ .select__item .select__title {
+			border: 2px solid #cc0000 !important;
+		}
+	}
 	&__item {
 		position: relative !important;
 	}
@@ -136,7 +147,7 @@
 		}
 	}
 	&._active {
-		z-index: 5;
+		z-index: 20;
 		.select__value {
 			&:before {
 				transform: translateY(-50%) scale(1, -1);

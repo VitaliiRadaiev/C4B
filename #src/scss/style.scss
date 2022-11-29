@@ -213,6 +213,7 @@ textarea {
 }
 .blocked-input {
 	pointer-events: none !important;
+	opacity: 0.3;
 }
 .ibg {
 	position: relative;
@@ -225,8 +226,30 @@ textarea {
 		object-fit: cover;
 	}
 }
+.disable {
+	pointer-events: none !important;
+	opacity: 0.3 !important;
+}
 .pt-0 {
 	padding-top: 0 !important;
+}
+
+.p-160 {
+	padding-top: 160px;
+
+	@media (max-width: $md3+px) {
+		padding-top: 80px;
+	}
+}
+
+.d-none {
+	display: none !important;
+}
+
+.lg-d-block {
+	@media (min-width: 1268px) {
+		display: block !important;
+	}
 }
 
 // === title ========================================================================
@@ -306,7 +329,7 @@ textarea {
 		left: -0.208em;
 		width: 0.3888em;
 		height: 0.819em;
-		background-color: #fff;
+		background-color: currentColor;
 		transform: translateX(-100%);
 
 		@media (max-width: $md1+px) {
@@ -321,6 +344,14 @@ textarea {
 }
 
 .text {
+}
+
+.text-success {
+	color: #119900 !important;
+}
+
+.text-danger {
+	color: #ff0000 !important;
 }
 
 .padding-space {
@@ -347,6 +378,59 @@ textarea {
 
 // === btn ========================================================================
 .btn-default {
+	font-size: 10px;
+	display: inline-flex;
+	padding: 8.7em 3.5em 3.3em;
+	color: #fff;
+	position: relative;
+	text-align: left;
+	background-color: $mainColor;
+	cursor: pointer;
+	transition: all .3s ease;
+
+	@media (max-width: $md3+px) {
+		font-size: 7px;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			background-color: $hover;
+
+			& .btn-default__arrow {
+				transform: translateY(0.3em) translateX(0.7em);
+			}
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		height: 6.8em;
+		top: 2em;
+		right: 2em;
+		z-index: 2;
+
+		& img {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	&__text {
+		font-size: 3.5em;
+		font-weight: 700;
+		font-style: normal;
+		letter-spacing: 0.05em;
+		line-height: 1.42em;
+		font-weight: 700;
+	}
+
+	&__arrow {
+		display: inline-block;
+		height: 1em !important;
+		width: auto !important;
+		transition: all .3s ease;
+		transform: translateY(0.3em);
+	}
 }
 
 button.btn-default {
@@ -415,6 +499,8 @@ button.btn-default {
 [data-href] {
 	cursor: pointer;
 }
+
+
 
 // === TEXT CONTETN BLOCK ========================================================================
 .float-right {
@@ -816,6 +902,7 @@ blockquote {
 @import "../common/info-block/info-block";
 @import "../common/with-decor/with-decor";
 @import "../common/form/form";
+@import "../common/tooltip/tooltip";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -829,5 +916,6 @@ blockquote {
 @import "pages/news";
 @import "pages/monitoring";
 @import "pages/news-detail";
+@import "pages/reports";
 
 // ==== AND PAGES =====================================================

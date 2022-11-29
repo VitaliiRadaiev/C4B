@@ -1,0 +1,57 @@
+.wpforms-tooltip {
+    background: none !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px !important;
+    
+    & i {
+        position: relative !important;
+        display: block;
+        &:after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            width: 0.8em;
+            height: 0.8em;
+            transform: translate(-50%, -50%);
+            display: block;
+            z-index: 1;
+            border-radius: 50%;
+            background-color: #59fed1;
+            transition: all .3s ease;
+        }
+
+        &:before {
+            z-index: 2;
+            position: relative;
+        }
+    }
+
+    &:hover {
+        color: #59fed1 !important;
+
+        & i {
+            &::after {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.ui-tooltip {
+    border-radius: 0;
+    padding: 24px;
+    
+    @media (max-width: 500px) {
+        width: 100vw;
+        max-width: 340px;
+    }
+
+    & .ui-tooltip-content {
+        font-size: 16px;
+        line-height: 1.4em;
+        max-height: none;
+    }
+}
