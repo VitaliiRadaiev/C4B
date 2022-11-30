@@ -1110,5 +1110,26 @@ div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left {
             color: inherit;
         }
     }
+
+    &.has-images {
+        & .image-wrapper {
+            display: none !important;
+        }
+        
+        & > .wpforms-repeater-fields-wrapper {
+            & .wpforms-field-html {
+                display: none !important;
+            }
+
+            & .loaded-img {
+                margin-bottom: 20px;
+                transition: all .3s ease;
+
+                &.will-remove {
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
 }
 // // repeater fields  =============   Grundstücksnummer
