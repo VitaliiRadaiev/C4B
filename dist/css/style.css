@@ -2127,6 +2127,10 @@ textarea {
           transform: translateX(-100%);
 }
 
+.text-secondary {
+  color: #8d8d8d !important;
+}
+
 .text-success {
   color: #119900 !important;
 }
@@ -5631,7 +5635,7 @@ div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left button {
   grid-template-columns: auto auto auto 1fr;
   gap: 3.6em 0;
   width: 100%;
-  color: #454545;
+  color: #000;
 }
 
 .reports__table:not(:last-child) {
