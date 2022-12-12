@@ -1,6 +1,6 @@
-.wpforms-form .wpforms-field-container .wpforms-page {
-    display: block !important;
-}
+// .wpforms-form .wpforms-field-container .wpforms-page {
+//     display: block !important;
+// }
 
 // text style ==============
 div.wpforms-container-full .wpforms-form {
@@ -52,6 +52,18 @@ div.wpforms-container-full .wpforms-form {
                 padding: 0.111111em;
                 align-self: flex-start;
                 color: #fff;
+            }
+
+            &:first-of-type {
+                margin-bottom: 1.6em;
+                font-size: 40px;
+                line-height: 1.5em;
+                letter-spacing: 0.01875em;
+
+                @media (max-width: $md3+px) {
+                    font-size: 30px;
+                    line-height: 1.7em;
+                }
             }
         }
 
@@ -209,6 +221,106 @@ div.wpforms-container-full .wpforms-form .wpforms-page {
                 }
             }
         }
+
+        &.preview-imgase {
+            display: block;
+            & .wpforms-entry-preview-value {
+                display: none;
+            }
+
+            & .dz-preview {
+                display: flex;
+                gap: 20px;
+                flex-wrap: nowrap;
+                align-items: center;
+
+                @media (max-width: $md3+px) {
+                    gap: 10px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                    @media (max-width: $md3+px) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                & .dz-size,
+                & .dz-progress,
+                & .dz-error-message,
+                & .dz-success-mark,
+                & .dz-error-mark,
+                & .dz-remove {
+                    display: none !important;
+                }
+
+                & .dz-image {
+                    flex: 0 0 auto;
+                    width: 100px;
+                    height: 100px;
+
+                    @media (max-width: $md3+px) {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                & .dz-details {
+                    font-size: 20px;
+                    line-height: 1.4em;
+                    word-break: break-word;
+
+                    @media (max-width: $md3+px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            & .loaded-img-wrap {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+
+                @media (max-width: $md3+px) {
+                    gap: 5px 10px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                    @media (max-width: $md3+px) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                & img.loaded-img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: contain;
+                    flex: 0 0 auto;
+    
+                    @media (max-width: $md3+px) {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+
+                & .loaded-img-name {
+                    font-size: 20px;
+                    line-height: 1.4em;
+                    word-break: break-word;
+
+                    @media (max-width: $md3+px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
     }
 
     & legend {
@@ -219,7 +331,9 @@ div.wpforms-container-full .wpforms-form .wpforms-page {
         margin-left: -27px;
 
         @media (max-width: $md3+px) {
-            font-size: 34px;
+            font-size: 26px;
+            padding: 0 15px;
+            margin-left: -12px;
         }
     }
 
@@ -493,7 +607,6 @@ div.wpforms-container-full .wpforms-form .wpforms-page.wpforms-page-4 {
     }
 }
 // // form page 4 ==================
-
 
 // inputs ===========
 div.wpforms-container-full .wpforms-form input {
@@ -929,7 +1042,7 @@ div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left {
         }
 
         & .registration-name {
-            & .wpforms-field-row { 
+            & .wpforms-field-row {
                 max-width: none !important;
             }
 
@@ -1112,22 +1225,60 @@ div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left {
     }
 
     &.has-images {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 60px 35px;
+
+        @media (max-width: $md3+px) {
+            gap: 40px;
+        }
+
         & .image-wrapper {
             display: none !important;
         }
-        
+
         & > .wpforms-repeater-fields-wrapper {
+            @media (min-width: 992px) {
+                flex: 0 1 calc(50% - (35px / 2));
+            }
             & .wpforms-field-html {
                 display: none !important;
             }
 
-            & .loaded-img {
-                margin-bottom: 20px;
-                transition: all .3s ease;
+            & .wpforms-field-checkbox {
+                margin-bottom: 0 !important;
+                height: 100%;
+                flex-direction: initial;
 
+                & > ul {
+                    margin-top: auto !important;
+                }
+            }
+
+            & .loaded-img-wrap {
+                transition: all 0.3s ease;
                 &.will-remove {
                     opacity: 0.4;
                 }
+            }
+
+            & .loaded-img {
+                margin-bottom: 10px;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+
+                @media (min-width: 992px) {
+                    height: 200px;
+                }
+            }
+
+            & .loaded-img-name {
+                font-size: 14px;
+                line-height: 1.4em;
+                word-break: break-word;
+                margin-bottom: 20px;
             }
         }
     }

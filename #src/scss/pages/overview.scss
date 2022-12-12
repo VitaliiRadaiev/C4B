@@ -1,5 +1,9 @@
 .overview {
     & .text-content {
+
+        & .wpforms-page-button {
+            background-image: none;
+        }
     }
 
     & div.wpforms-container-full .wpforms-form {
@@ -41,6 +45,7 @@
 
         & table {
             font-style: italic;
+            width: 100%;
             @media (max-width: $md3+px) {
                 display: block;
             }
@@ -63,6 +68,10 @@
                     padding-right: 0.7em;
                     min-width: 9em;
 
+                    @media (min-width: 768px) {
+                        width: 50%;
+                    }
+
                     @media (max-width: $md3+px) {
                         min-width: auto;
                         font-weight: bold;
@@ -83,40 +92,75 @@
                 font-weight: 400;
             }
         }
+
+        &.not-border {
+            border: none;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    &--second {
+        & > .container-sm {
+            max-width: 1120px;
+        }
     }
 }
 
 .upload-images {
     padding-left: 0 !important;
     margin-bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px 35px;
     list-style: none !important;
 
-    @media (max-width: $md3+px) {
-        gap: 30px;
-    }
-
     & > li {
-        flex: 0 1 calc(33.3333333% - (35px * 2 / 3));
         list-style: none !important;
-
-        @media (max-width: $md2+px) {
-            flex: 0 1 calc(50% - (35px / 2));
-        }
-        @media (max-width: $md2+px) {
-            flex: 0 1 100%;
-        }
-    }
-    &__img {
-        padding-bottom: 61.94%;
-        margin-bottom: 25px;
-        display: block;
-        opacity: 1 !important;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-wrap: nowrap;
+        align-items: center;
 
         @media (max-width: $md3+px) {
-            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+            @media (max-width: $md3+px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        & .dz-details {
+            font-size: 20px;
+            line-height: 1.4em;
+            word-break: break-word;
+
+            @media (max-width: $md3+px) {
+                font-size: 16px;
+            }
+        }
+
+        & .dz-size {
+            display: none;
+        }
+    
+    }
+    &__img {
+        flex: 0 0 auto;
+        width: 100px;
+        height: 100px;
+        background-image: none !important;
+
+        @media (max-width: $md3+px) {
+            width: 60px;
+            height: 60px;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 
@@ -125,13 +169,59 @@
         font-size: 22px;
         font-weight: 400;
         line-height: 1.4em;
+        word-break: break-word;
 
         @media (max-width: $md3+px) {
             font-size: 18px;
         }
     }
+
+    & a:hover {
+        opacity: 0.7;
+    }
 }
 
 .fancybox__container {
     opacity: 1 !important;
+}
+
+.overview-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 2.4rem;
+    line-height: 1.25em;
+    color: #777777;
+
+    @media (max-width: $md3+px) {
+        font-size: 18px;
+    }
+
+    & h6 {
+        margin-bottom: 0;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 1.25em;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.58em;
+        text-transform: none;
+        color: #000;
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+        }
+    }
+
+    & > li {
+
+        &:not(:last-child) {
+            margin-bottom: 8rem;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 40px;
+            }
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
